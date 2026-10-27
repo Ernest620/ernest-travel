@@ -1,0 +1,42 @@
+
+/* 共用：定位＋日本氣象廳天氣卡（無 API Key） */
+.travelTools{max-width:1280px;margin:14px auto 4px;padding:0 12px;font-family:system-ui,-apple-system,"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif}
+.travelToolPanel{background:#fff;border:1px solid #dde5ef;border-radius:18px;padding:18px;box-shadow:0 6px 22px rgba(25,38,65,.055)}
+.travelToolTop{display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.travelToolTop h2{font-size:22px!important;margin:0!important;color:#172033!important}
+.travelLocateRow{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.travelLocateBtn,.travelRefreshBtn{border:0;border-radius:11px;background:#172554;color:#fff;font-weight:850;padding:11px 14px;cursor:pointer;font-size:14px}
+.travelRefreshBtn{background:#eef3ff;color:#294c9c;border:1px solid #cbd9fb}
+.travelLocateStatus{font-size:14px;color:#63728a;line-height:1.5}
+.travelCurrentMap{display:none;text-decoration:none;font-size:12px;font-weight:850;padding:8px 10px;border:1px solid #d5deea;border-radius:10px;color:#3157a7;background:#fff}
+.travelCurrentMap.show{display:inline-block}
+.weatherHead{display:flex;justify-content:space-between;gap:8px;align-items:center;margin-top:14px;padding-top:12px;border-top:1px solid #e9edf3}
+.weatherHead b{font-size:19px}.weatherSource{font-size:13px;color:#7b8798}
+.weatherGrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:9px;margin-top:9px}
+.weatherFold{border:1px solid #e0e6ee;border-radius:15px;background:#fafcff;overflow:hidden;min-width:0}
+.weatherFold>summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:8px;padding:12px 13px;font-weight:900;color:#172033;user-select:none}
+.weatherFold>summary::-webkit-details-marker{display:none}
+.weatherFold>summary:after{content:'＋';font-size:18px;color:#60708a}
+.weatherFold[open]>summary:after{content:'－'}
+.weatherFoldHint{font-size:10px;font-weight:700;color:#8794a7;margin-left:auto}
+.weatherFold .weatherCard{border:0;border-top:1px solid #e8edf4;border-radius:0;background:#fff}
+.weatherCard{border:1px solid #e0e6ee;border-radius:15px;padding:11px;background:#fafcff;min-width:0}
+.weatherCardTitle{display:flex;justify-content:space-between;align-items:center;gap:8px;font-weight:900;font-size:14px}
+.weatherEmoji{font-size:25px}
+.weatherMain{font-size:17px;font-weight:800;line-height:1.5;margin-top:6px}
+.weatherMeta{font-size:14px;color:#68778d;line-height:1.55;margin-top:5px}
+.weatherDays{display:grid;gap:5px;margin-top:9px}
+.weatherDay{border-top:1px dashed #dce4ee;padding-top:8px;font-size:15px;line-height:1.65;color:#4e5e74}
+.weatherAlert{margin-top:9px;border-radius:11px;padding:11px 12px;font-size:15px;line-height:1.6;font-weight:850}
+.weatherAlert.ok{background:#eef8f2;color:#17653f;border:1px solid #cde8d7}
+.weatherAlert.advisory{background:#fff8df;color:#785c08;border:1px solid #ead58a}
+.weatherAlert.warning{background:#fff0ed;color:#9b3325;border:1px solid #efc4bc}
+.weatherTravelNote{margin-top:9px;font-size:14px;line-height:1.65;color:#72591a;background:#fffbea;border-radius:9px;padding:6px 7px}
+.weatherDetails{display:inline-block;margin-top:9px;font-size:14px;text-decoration:none;color:#3157a7;font-weight:800}
+.siteVersionFooter{max-width:1280px;margin:18px auto 28px;padding:0 12px}
+.siteVersionFooter>div{border-top:1px solid #dfe6ef;padding:14px 2px 0;color:#7b8798;font-size:11px;line-height:1.6}
+.noApiNotice{font-weight:800;color:#17653f}
+@media(max-width:900px){.weatherGrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){.travelTools{padding:0 8px;margin-top:8px}.travelToolPanel{padding:10px;border-radius:14px}.travelToolTop{align-items:flex-start}.travelToolTop h2{font-size:18px!important}.travelLocateRow{width:100%}.travelLocateBtn{width:100%}.travelLocateStatus{font-size:12px}.weatherGrid{grid-template-columns:1fr;gap:7px}.weatherHead{align-items:flex-start;flex-direction:column}.weatherHead b{font-size:17px}.weatherSource{font-size:11px}.weatherFold>summary{padding:11px 12px}.weatherFoldHint{display:none}.weatherCard{padding:10px}.weatherMain{font-size:15px}.weatherMeta,.weatherDay,.weatherAlert{font-size:13px}}
+
+.travelTopActions{display:flex;align-items:center;gap:8px}.personalListBtn{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;border-radius:11px;background:#fff7df;color:#725417;border:1px solid #ead49d;font-weight:900;padding:10px 13px;font-size:13px;white-space:nowrap}.personalListBtn:hover{background:#ffefbd}@media(max-width:560px){.travelTopActions{width:100%}.personalListBtn{width:100%}}
