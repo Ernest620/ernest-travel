@@ -1,0 +1,91 @@
+name: Bootstrap current Ernest Travel site
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/bootstrap-site.yml"
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  bootstrap:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Skip when bootstrap already completed
+        id: check
+        run: |
+          if [ -f .bootstrap_complete ]; then
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "skip=false" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Download current Netlify site
+        if: steps.check.outputs.skip != 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p _mirror
+          declare -A PAGES=(
+            [index.html]="/"
+            [itinerary_2027.html]="/itinerary_2027"
+            [sapporo_2h.html]="/sapporo_2h"
+            [sapporo_underground.html]="/sapporo_underground"
+            [tanukikoji.html]="/tanukikoji"
+            [otaru_5km.html]="/otaru_5km"
+            [hakodate_1h.html]="/hakodate_1h"
+            [lake_toya.html]="/lake_toya"
+            [travel_overview.html]="/travel_overview"
+            [social_hokkaido.html]="/social_hokkaido"
+            [must_hokkaido.html]="/must_hokkaido"
+            [detail.html]="/detail"
+          )
+          for name in "${!PAGES[@]}"; do
+            url="https://ernest-travel.netlify.app${PAGES[$name]}"
+            echo "Fetching $url -> $name"
+            if curl -fL --retry 3 --connect-timeout 15 --max-time 90 "$url" -o "_mirror/$name"; then
+              cp "_mirror/$name" "$name"
+            else
+              echo "WARN: $url unavailable; continuing"
+            fi
+          done
+
+          python - <<'PY'
+          from pathlib import Path
+          import re, urllib.parse, urllib.request
+
+          root=Path('.')
+          base='https://ernest-travel.netlify.app/'
+          refs=set()
+          for p in root.glob('*.html'):
+              try: s=p.read_text(encoding='utf-8',errors='ignore')
+              except Exception: continue
+              for m in re.finditer(r'''(?:src|href)=["']([^"'?#]+)''',s,re.I):
+                  u=m.group(1).strip()
+                  if not u or u.startswith(('http://','https://','mailto:','tel:','data:','#','javascript:','//')): continue
+                  if u.endswith('.html') or u.startswith('/'): continue
+                  refs.add(u.lstrip('./'))
+          for rel in sorted(refs):
+              if '..' in Path(rel).parts: continue
+              dest=root/rel
+              if dest.exists(): continue
+              try:
+                  dest.parent.mkdir(parents=True,exist_ok=True)
+                  url=urllib.parse.urljoin(base,rel)
+                  req=urllib.request.Request(url,headers={'User-Agent':'Mozilla/5.0 ErnestTravelBootstrap/1.0'})
+                  with urllib.request.urlopen(req,timeout=30) as r:
+                      dest.write_bytes(r.read())
+                  print('asset',rel)
+              except Exception as e:
+                  print('WARN asset',rel,e)
+          PY
+          rm -rf _mirror
+          date -u +"%Y-%m-%dT%H:%M:%SZ" > .bootstrap_complete
+      - name: Commit mirrored site
+        if: steps.check.outputs.skip != 'true'
+        run: |
+          git config user.name "ernest-travel-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add -A
+          git diff --cached --quiet || git commit -m "chore: import current Ernest Travel site from Netlify"
+          git push
