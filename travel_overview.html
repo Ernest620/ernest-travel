@@ -1,1 +1,306 @@
-<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>北海道旅遊總覽</title><style>body{font-family:system-ui;margin:0;background:#f6f7f8}.w{max-width:760px;margin:auto;padding:12px}.x{display:block;background:#fff;border:2px solid #333;border-radius:15px;padding:12px;margin:8px 0}</style><link rel="stylesheet" href="assets/mobile-refresh.css?v=20261027">\n</head><body><main class="w"><a href="index.html">← 回首頁</a><h1>🗾 北海道旅遊總覽</h1><a class="x" href="hakodate_1h.html">函館</a><a class="x" href="lake_toya.html">洞爺湖</a><a class="x" href="sapporo_2h.html">札幌</a><a class="x" href="sapporo_underground.html">札幌地下街</a><a class="x" href="tanukikoji.html">狸小路</a><a class="x" href="otaru_5km.html">小樽</a><a class="x" href="centrair_4h.html">中部國際機場</a></main><script src="assets/mobile-refresh.js?v=20261027"></script>\n</body></html>
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>札幌自由行｜分區完整版｜景點・餐廳・商店</title>
+<meta name="theme-color" content="#0f172a">
+<style>
+:root {
+  --bg:#f5f7fb; --card:#fff; --text:#172033; --muted:#687386; --line:#e5e9f1;
+  --brand:#3157d5; --brand2:#6c42d8; --good:#0a7b53; --warn:#a15c00;
+  --shadow:0 10px 30px rgba(26,39,66,.08); --r:18px;
+}
+*{box-sizing:border-box} html{scroll-behavior:smooth}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI","Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;background:var(--bg);color:var(--text)}
+button,input,select{font:inherit}
+a{color:inherit}
+.hero{background:linear-gradient(135deg,#0f172a 0%,#263f91 55%,#5d3bc0 100%);color:white;padding:34px 18px 26px}
+.wrap{max-width:1280px;margin:auto}
+.hero h1{font-size:clamp(28px,5vw,52px);line-height:1.05;margin:0 0 12px}
+.hero p{max-width:920px;line-height:1.7;opacity:.9;margin:0}
+.hero-badges{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}
+.hero-badge{font-size:13px;padding:7px 10px;border:1px solid rgba(255,255,255,.25);border-radius:999px;background:rgba(255,255,255,.1)}
+.tabs{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:-18px;padding:0 14px;position:sticky;top:0;z-index:20}
+.tab{border:0;padding:13px 8px;border-radius:14px;background:white;box-shadow:var(--shadow);cursor:pointer;font-weight:750;color:#445}
+.tab.active{background:#172554;color:white}
+.type-tabs{display:flex;gap:8px;flex-wrap:wrap;padding:14px 14px 0}
+.type-tab{border:1px solid var(--line);background:white;color:#455066;border-radius:999px;padding:9px 13px;cursor:pointer;font-weight:750}
+.type-tab.active{background:#3157d5;color:white;border-color:#3157d5}
+.section-heading{grid-column:1/-1;margin:8px 0 -2px;font-size:22px;font-weight:900;color:#1c2842}
+.section-sub{grid-column:1/-1;margin:-6px 0 4px;color:#738096;font-size:13px}
+.controls{margin:18px 14px 8px;background:white;border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);padding:14px;display:grid;grid-template-columns:2fr 1fr 1fr 1fr 1fr 1fr;gap:10px;align-items:center}
+.control{width:100%;border:1px solid var(--line);border-radius:12px;padding:11px 12px;background:#fafbfe;color:var(--text)}
+.api-panel{margin:10px 14px 0;background:#eef3ff;border:1px solid #d9e3ff;border-radius:16px;padding:12px}
+.api-row{display:flex;gap:8px;flex-wrap:wrap}
+.api-row input{flex:1;min-width:240px}
+.btn{border:0;border-radius:12px;padding:11px 14px;cursor:pointer;font-weight:750;background:#172554;color:white}
+.btn.secondary{background:white;color:#24345e;border:1px solid #cfd8ef}
+.api-note{font-size:12px;color:#56627a;line-height:1.5;margin:7px 0 0}
+.summary{display:flex;gap:8px;flex-wrap:wrap;padding:10px 14px 2px}
+.pill{background:white;border:1px solid var(--line);padding:7px 10px;border-radius:999px;font-size:13px}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;padding:12px 14px 40px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;box-shadow:0 5px 20px rgba(25,35,55,.055);display:flex;flex-direction:column;min-width:0}
+.preview{height:170px;position:relative;background:#e8edf7;overflow:hidden}
+.preview img{width:100%;height:100%;object-fit:cover;display:block}
+.photo-credit{position:absolute;bottom:6px;right:7px;left:7px;font-size:10px;color:#fff;text-shadow:0 1px 3px #000;background:rgba(0,0,0,.32);border-radius:7px;padding:3px 5px;display:none}
+.badges{position:absolute;top:9px;left:9px;display:flex;gap:6px;flex-wrap:wrap}
+.badge{font-size:11px;font-weight:800;padding:5px 7px;border-radius:999px;background:rgba(255,255,255,.92);color:#24304b;backdrop-filter:blur(6px)}
+.badge.featured{background:#fff4cf;color:#734d00}
+.body{padding:14px;display:flex;flex-direction:column;gap:9px;flex:1}
+.title{font-size:19px;line-height:1.25;font-weight:850;margin:0}
+.jp{font-size:12px;color:var(--muted);margin-top:-4px}
+.desc{font-size:14px;line-height:1.55;color:#455066;min-height:42px}
+.meta{display:flex;gap:6px;flex-wrap:wrap}
+.meta span{font-size:12px;padding:5px 7px;border-radius:8px;background:#f2f5fa;color:#536077}
+.rating{display:flex;gap:8px;flex-wrap:wrap;align-items:center;font-size:13px}
+.rate-google{color:#865900;font-weight:800}
+.rate-tabelog{color:#b23a2e;font-weight:850}.rating-note{font-size:11px;color:#7a8495}.rate-box{display:flex;align-items:center;gap:7px;flex-wrap:wrap;background:#fff7f5;border:1px solid #f0d5cf;border-radius:10px;padding:7px 9px}
+.actions{display:flex;gap:7px;flex-wrap:wrap;margin-top:auto;padding-top:3px}
+.actions a,.actions button{font-size:12px;text-decoration:none;border:1px solid #d8deea;background:white;border-radius:9px;padding:7px 9px;cursor:pointer}
+.empty{grid-column:1/-1;text-align:center;background:white;border:1px dashed #ccd3e1;border-radius:18px;padding:48px 20px;color:var(--muted)}
+.source-note{margin:0 14px 50px;background:white;border:1px solid var(--line);border-radius:16px;padding:14px;color:#5d6678;font-size:12px;line-height:1.65}
+.footer-space{height:20px}
+@media(max-width:980px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.controls{grid-template-columns:1fr 1fr}.controls .wide{grid-column:1/-1}}
+@media(max-width:640px){
+ .hero{padding-top:28px} .tabs{grid-template-columns:repeat(2,1fr);position:static;margin-top:-14px}
+ .controls{grid-template-columns:1fr;margin-top:12px} .controls .wide{grid-column:auto}
+ .grid{grid-template-columns:1fr;padding-left:10px;padding-right:10px}
+ .controls,.api-panel,.summary,.source-note{margin-left:10px;margin-right:10px}
+ .preview{height:180px}
+}
+</style>
+<link rel="stylesheet" href="assets/seasonal.css"><link rel="stylesheet" href="assets/dense-mobile.css?v=20261027">
+<link rel="stylesheet" href="assets/weather.css"><link rel="stylesheet" href="assets/list-view.css"></head>
+<body>
+<header class="hero">
+ <div class="wrap">
+  <h1>北海道旅遊總覽</h1>
+  <div class="hero-badges">
+    <span class="hero-badge">📱 手機友善</span><span class="hero-badge">🖼️ 預覽圖不再空白</span>
+    <span class="hero-badge">中文店名＋日文原名</span><span class="hero-badge">🚉 札幌站約2小時圈</span>
+    <span class="hero-badge">📍 小樽站 5km</span><span class="hero-badge">⭐ Tabelog 分數直接列出</span>
+  </div>
+ </div>
+</header>
+
+<main class="wrap">
+ <nav class="tabs" id="tabs">
+  <button class="tab active" data-scope="tanuki">狸小路</button>
+  <button class="tab" data-scope="sapporo2h">札幌站 2 小時圈</button>
+  <button class="tab" data-scope="otaru5">小樽站 5km</button>
+  <button class="tab" data-scope="all">全部區域</button>
+ </nav>
+
+ <nav class="type-tabs" id="typeTabs">
+  <button class="type-tab active" data-type="spot">📍 景點</button>
+  <button class="type-tab" data-type="food">🍽️ 餐廳・甜點</button>
+  <button class="type-tab" data-type="shop">🛍️ 商店・市場</button>
+  <button class="type-tab" data-type="all">全部類型</button>
+ </nav>
+
+ <section class="controls">
+   <input id="q" class="control wide" placeholder="搜尋：中文／日文店名、景點、區域、類型…">
+   <select id="category" class="control"><option value="">所有細分類</option></select>
+   <select id="time" class="control">
+     <option value="">所有搭車時間</option><option value="30">≤30 分</option><option value="60">≤60 分</option>
+     <option value="90">≤90 分</option><option value="120">≤120 分</option>
+   </select>
+   <select id="chome" class="control">
+     <option value="">狸小路所有丁目</option><option>1</option><option>2</option><option>3</option><option>4</option>
+     <option>5</option><option>6</option><option>7</option><option>8</option>
+   </select>
+   <select id="sort" class="control">
+     <option value="featured">推薦優先</option><option value="time">交通時間</option>
+     <option value="distance">小樽距離</option><option value="tabelog">Tabelog評分</option>
+     <option value="rating">Google評分</option><option value="name">店名</option>
+   </select>
+   <select id="ratedOnly" class="control">
+     <option value="">全部評分狀態</option>
+     <option value="tabelog">只看有 Tabelog 分數</option>
+   </select>
+ </section>
+
+ <section class="api-panel"><div class="sourcebox"><b>Google API 已移除。</b> 本頁使用已整理的靜態資料快照；最新營業時間、照片與評論請直接按 Google Maps。</div></section>
+
+ <div class="summary" id="summary"></div>
+ <section class="grid" id="grid"></section>
+
+ <section class="source-note">
+  <b>資料與評分說明：</b> 本版改回「區域 → 類型 → 細分類」三層方式瀏覽，景點、餐廳甜點、商店市場不再混在同一個清單。原本 102 筆資料全部保留。餐廳／咖啡／甜點的 Tabelog 分數直接寫在卡片內，查核日期為 2026/08/17，不需要另外開 Tabelog 才能查看。狸COMICHI、小樽出拔小路、砂川甜點之路等「多店集合／區域型」設施沒有合理的單一 Tabelog 總分，因此直接標示為複合設施，不再以「缺評分」呈現。其他景點與商店使用已整理的 Google 公開評分快照；需要最新評分、照片與營業狀態時直接開啟 Google Maps。交通時間仍為札幌站出發概略值，冬季班次、積雪與轉乘可能改變實際所需時間。
+ </section>
+</main>
+
+<script>
+const DATA=[{"scope":"tanuki","cn":"狸小路商店街","jp":"札幌狸小路商店街","category":"景點","area":"狸小路1–7丁目","desc":"約900公尺的全天候拱廊商店街，約200間店；冬天下雪也很好逛。","travel":15,"transport":"札幌站→大通/步行","otaruKm":null,"chome":"1–7","googleRating":4.2,"googleReviews":17881,"tabelogRating":null,"tabelogUrl":null,"officialUrl":"https://tanukikoji.or.jp/","winter":true,"featured":true,"group":"景點體驗","typeBucket":"spot"},{"scope":"tanuki","cn":"本陣狸大明神社（狸神社）","jp":"本陣狸大明神社","category":"神社","area":"狸小路5丁目","desc":"狸小路代表性小神社，可摸狸像祈求八德，是商店街內很容易漏掉的景點。","travel":18,"transport":"札幌站→大通/步行","otaruKm":null,"chome":"5","googleRating":null,"googleReviews":null,"tabelogRating":null,"tabelogUrl":null,"officialUrl":"https://tanukikoji.or.jp/featured/","winter":true,"featured":true,"group":"文化歷史","typeBucket":"spot"},{"scope":"tanuki","cn":"moyuk SAPPORO 商場","jp":"moyuk SAPPORO","category":"商店","area":"狸小路3丁目","desc":"新型複合商場，餐飲、伴手禮、生活雜貨集中；AOAO水族館也在館內。","travel":18,"transport":"札幌站→大通/步行","otaruKm":null,"chome":"3","googleRating":3.9,"googleReviews":982,"tabelogRating":null,"tabelogUrl":null,"officialUrl":null,"winter":true,"featured":true,"group":"購物市場","typeBucket":"shop"},{"scope":"tanuki","cn":"AOAO SAPPORO 都市水族館","jp":"AOAO SAPPORO","category":"水族館","area":"狸小路3丁目","desc":"位於moyuk 4–6樓的都市型水族館，適合雪天、晚間行程。","travel":18,"transport":"札幌站→大通/步行","otaruKm":null,"chome":"3","googleRating":4.3,"googleReviews":3667,"tabelogRating":null,"tabelogUrl":null,"officialUrl":null,"winter":true,"featured":true,"group":"自然休閒","typeBucket":"spot"},{"scope":"tanuki","cn":"狸COMICHI 北海道美食街","jp":"狸COMICHI","category":"餐飲街","area":"狸小路2丁目","desc":"兩層樓北海道飲食聚落，可一次選海鮮、燒鳥、居酒屋等。","travel":18,"transport":"札幌站→大通/步行","otaruKm":null,"chome":"2","googleRating":4.1,"googleReviews":474,"tabelogRating":null,"tabelogUrl":null,"officialUrl":null,"winter":true,"featured":true,"tabelogReviews":null,"tabelogChecked":"2026-08-17","tabelogStatus":"complex","tabelogNote":"複合餐飲設施；館內各店各自有 Tabelog 評分，沒有單一總分。","group":"餐飲甜點","typeBucket":"food"},{"scope":"tanuki","cn":"札幌MEGA唐吉訶德 狸小路本店","jp":"MEGAドン・キホーテ 札幌狸小路本店","category":"商店","area":"狸小路4丁目","desc":"24小時大型折扣店，藥妝、零食、家電、日用品、伴手禮一次補齊。","travel":18,"transport":"札幌站→大通/步行","otaruKm":null,"chome":"4","googleRating":3.7,"googleReviews":7719,"tabelogRating":null,"tabelogUrl":null,"officialUrl":null,"winter":true,"featured":true,"group":"購物市場","typeBucket":"shop"},{"scope":"tanuki","cn":"NORBESA 摩天輪商場","jp":"ノルベサ","category":"娛樂","area":"狸小路5丁目旁","desc":"屋頂有札幌市中心摩天輪 nORIA，夜景與購物一次完成。","travel":20,"transport":"札幌站→すすきの/步行","otaruKm":null,"chome":"5","googleRating":3.8,"googleReviews":3984,"tabelogRating":null,"tabelogUrl":null,"officialUrl":null,"winter":true,"featured":true,"group":"景點體驗","typeBucket":"spot"},{"scope":"tanuki","cn":"札幌藥妝 狸小路5丁目店","jp":"サツドラ 狸小路5丁目店","category":"藥妝","area":"狸小路5丁目","desc":"北海道本地藥妝連鎖，常見藥品、保養品、零食與日用品。","travel":20,"transport":"札幌站→大通/步行","otaruKm":null,"chome":"5","googleRating":4.1,"googleReviews":184,"tabelogRating":null,"tabelogUrl":null,"officialUrl":null,"winter":true,"featured":false,"group":"購物市場","typeBucket":"shop"},{"scope":"tanuki","cn":"鶴羽藥妝 狸小路5丁目店","jp":"ツルハドラッグ 狸小路5丁目店","category":"藥妝","area":"狸小路5丁目","desc":"大型連鎖藥妝，適合比價與補貨。","travel":20,"transport":"札幌站→大通/步行","otaruKm":null,"chome":"5","googleRating":4.1,"googleReviews":41,"tabelogRating":null,"tabelogUrl":null,"officialUrl":null,"winter":true,"featured":false,"group":"購物市場","typeBucket":"shop"},{"scope":"tanuki","cn":"大國藥妝 狸小路5丁目店","jp":"ダイコクドラッグ 狸小路5丁目店","category":"藥妝","area":"狸小路5丁目","desc":"折扣型藥妝店，藥品、保健品與美妝選擇多。","travel":20,"transport":"札幌站→大通/步行","otaruKm":null,"chome":"5","googleRating":3.6,"googleReviews":82,"tabelogRating":null,"tabelogUrl":null,"officialUrl":null,"winter":true,"featured":false,"group":"購物市場","typeBucket":"shop"},{"scope":"tanuki","cn":"宮文刃物店","jp":"宮文","category":"商店","area":"狸小路2丁目","desc":"札幌老字號刀具店，適合看日式菜刀、剪刀與磨刀用品。","travel":18,"transport":"札幌站→大通/步行","otaruKm":null,"chome":"2","googleRating":null,"googleReviews":null,"tabelogRating":null,"tabelogUrl":null,"officialUrl":"https://tanukikoji.or.jp/shop-search/","winter":true,"featured":false,"group":"購物市場","typeBucket":"shop"},{"scope":"tanuki","cn":"KINOTOYA BAKE 地下街店","jp":"きのとや BAKE ポールタウン店","category":"甜點","area":"狸小路3丁目地下","desc":"人氣起司塔、甜點外帶店，從狸小路可直接進札幌地下街。","travel":18,"transport":"札幌站→大通/地下街","otaruKm":null,"chome":"3","googleRating":4.6,"googleReviews":1186,"tabelogRating":3.44,"tabelogUrl":"https://tabelog.com/hokkaido/A0101/A010103/1049257/","officialUrl":null,"winter":true,"featured":false,"tabelogReviews":318,"tabelogChecked":"2026-08-17","tabelogStatus":"rated","group":"餐飲甜點","typeBucket":"food"},{"scope":"tanuki","cn":"牛與魚 狸小路","jp":"うしとさかな 狸小路","category":"餐廳","area":"狸小路5丁目附近","desc":"和牛與海鮮丼、日式料理，適合想吃肉又想吃海鮮。","travel":20,"transport":"札幌站→すすきの/步行","otaruKm":null,"chome":"5","googleRating":4.7,"googleReviews":215,"tabelogRating":3.28,"tabelogUrl":"https://tabelog.com/hokkaido/A0101/A010102/1078794/","officialUrl":null,"winter":true,"featured":false,"tabelogReviews":22,"tabelogChecked":"2026-08-17","tabelogStatus":"rated","group":"餐飲甜點","typeBucket":"food"},{"scope":"tanuki","cn":"札幌新倉屋 本店","jp":"札幌新倉屋 本店","category":"甜點","area":"狸小路6丁目","desc":"北海道老字號和菓子，花園糰子是招牌。","travel":22,"transport":"札幌站→大通/步行","otaruKm":null,"chome":"6","googleRating":null,"googleReviews":null,"tabelogRating":3.48,"tabelogUrl":"https://tabelog.com/hokkaido/A0101/A010102/1000309/","officialUrl":"https://tanukikoji.or.jp/shop-search/","winter":true,"featured":false,"tabelogReviews":191,"tabelogChecked":"2026-08-17","tabelogStatus":"rated","group":"餐飲甜點","typeBucket":"food"},{"scope":"tanuki","cn":"狸小路1丁目＋二條市場散步區","jp":"狸小路1丁目・二条市場周辺","category":"景點","area":"狸小路1丁目","desc":"狸小路東端與二條市場相連，適合早上吃海鮮後一路往西逛。","travel":20,"transport":"札幌站→大通/步行","otaruKm":null,"chome":"1","googleRating":null,"googleReviews":null,"tabelogRating":null,"tabelogUrl":null,"officialUrl":null,"winter":true,"featured":true,"group":"景點體驗","typeBucket":"spot"},{"scope":"tanuki","cn":"狸小路7丁目復古拱廊","jp":"狸小路7丁目","category":"景點","area":"狸小路7丁目","desc":"保留較復古的拱廊氛圍，小店、酒吧、拉麵與個性店家較多。","travel":24,"transport":"札幌站→すすきの/步行","otaruKm":null,"chome":"7","googleRating":null,"googleReviews":null,"tabelogRating":null,"tabelogUrl":null,"officialUrl":null,"winter":true,"featured":true,"group":"景點體驗","typeBucket":"spot"},{"scope":"tanuki","cn":"狸小路8丁目巷弄區","jp":"狸小路8丁目周辺","category":"景點","area":"狸小路8丁目","desc":"雖不在主要1–7丁目拱廊內，但有不少老屋改造餐酒館與特色小店。","travel":26,"transport":"札幌站→すすきの/步行","otaruKm":null,"chome":"8","googleRating":null,"googleReviews":null,"tabelogRating":null,"tabelogUrl":null,"officialUrl":null,"winter":true,"featured":false,"group":"景點體驗","typeBucket":"spot"},{"scope":"sapporo2h","cn":"JR塔展望室 T38","jp":"JRタワー展望室 T38","category":"展望","area":"札幌站","desc":"札幌站直結，38樓看札幌市景與雪景。","travel":5,"transport":"步行","otaruKm":null,"chome":null,"googleRating":null,"googleReviews":null,"tabelogRating":null,"tabelogUrl":null,"officialUrl":null,"winter":true,"featured":false,"group":"景點體驗","typeBucket":"spot"},{"scope":"sapporo2h","cn":"北海道大學銀杏大道／校園","jp":"北海道大学","category":"景點","area":"札幌","desc":"札幌站北側免費校園散步，冬季雪景也漂亮。","travel":10,"transport":"步行","otaruKm":null,"chome":null,"googleRating":null,"googleReviews":null,"tabelogRating":null,"tabelogUrl":null,"officialUrl":null,"winter":true,"featured":false,"group":"景點體驗","typeBucket":"spot"},{"scope":"sapporo2h","cn":"北海道廳舊本廳舍（紅磚廳舍）","jp":"北海道庁旧本庁舎","category":"歷史","area":"札幌","desc":"札幌經典紅磚建築與庭園。","travel":10,"transport":"步行","otaruKm":null,"chome":null,"googleRating":null,"googleReviews":null,"tabelogRating":null,"tabelogUrl":null,"officialUrl":null,"winter":true,"featured":false,"group":"文化歷史","typeBucket":"spot"},{"scope":"sapporo2h","cn":"札幌市時計台","jp":"札幌市時計台","category":"歷史","area":"札幌","desc":"札幌地標之一，市中心可順路安排。","travel":12,"transport":"步行","otaruKm":null,"chome":null,"googleRating":null,"googleReviews":null,"tabelogRating":null,"tabelogUrl":null,"officialUrl":null,"winter":true,"featured":false,"group":"文化歷史","typeBucket":"spot"},{"scope":"sapporo2h","cn":"大通公園","jp":"大通公園","category":"公園","area":"札幌","desc":"雪祭、燈飾與季節活動核心區。","travel":12,"transport":"地下鐵/步行","otaruKm":null,"chome":null,"googleRating":null,"googleReviews":null,"tabelogRating":null,"tabelogUrl":null,"officialUrl":null,"winter":true,"featured":false,"group":"自然休閒","typeBucket":"spot"},{"scope":"sapporo2h","cn":"札幌電視塔","jp":"さっぽろテレビ塔","category":"展望","area":"札幌","desc":"可俯瞰大通公園，夜景方便。","travel":15,"transport":"地下鐵/步行","otaruKm":null,"chome":null,"googleRating":null,"googleReviews":null,"tabelogRating":null,"tabelogUrl":null,"officialUrl":null,"winter":true,"featured":false,"group":"景點體驗","typeBucket":"spot"},{"scope":"sapporo2h","cn":"二條市場","jp":"二条市場","category":"市場","area":"札幌","desc":"海鮮丼、螃蟹、乾貨與伴手禮。","travel":18,"transport":"地下鐵/步行","otaruKm":null,"chome":null,"googleRating":null,"googleReviews":null,"tabelogRating":null,"tabelogUrl":null,"officialUrl":null,"winter":true,"featured":false,"group":"購物市場","typeBucket":"shop"},{"scope":"sapporo2h","cn":"薄野","jp":"すすきの","category":"景點","area":"札幌","desc":"札幌主要夜生活與餐飲區。","travel":15,"transport":"地下鐵","otaruKm":null,"chome":null,"googleRating":null,"googleReviews":null,"tabelogRating":null,"tabelogUrl":null,"officialUrl":null,"winter":true,"featured":false,"group":"景點體驗","typeBucket":"spot"},{"scope":"sapporo2h","cn":"中島公園","jp":"中島公園","category":"公園","area":"札幌","desc":"湖景、歷史建築與雪景散步。","travel":18,"transport":"地下鐵","otaruKm":null,"chome":null,"googleRating":null,"googleReviews":null,"tabelogRating":null,"tabelogUrl":null,"officialUrl":null,"winter":true,"featured":false,"group":"自然休閒","typeBucket":"spot"},{"scope":"sapporo2h","cn":"札幌啤酒博物館","jp":"サッポロビール博物館","category":"博物館","area":"札幌","desc":"了解札幌啤酒歷史，可搭配成吉思汗。","travel":25,"transport":"巴士/步行","otaruKm":null,"chome":null,"googleRating":null,"googleReviews":null,"tabelogRating":null,"tabelogUrl":null,"officialUrl":null,"winter":true,"featured":false,"group":"文化歷史","typeBucket":"spot"},{"scope":"sapporo2h","cn":"白色戀人公園","jp":"白い恋人パーク","category":"景點","area":"札幌","desc":"甜點工廠、歐風園區與冬季燈飾。","travel":35,"transport":"地下鐵+步行","otaruKm":null,"chome":null,"googleRating":null,"googleReviews":null,"tabelogRating":null,"tabelogUrl":null,"officialUrl":null,"winter":true,"featured":false,"group":"景點體驗","typeBucket":"spot"},{"scope":"sapporo2h","cn":"北海道神宮","jp":"北海道神宮","category":"神社","area":"札幌","desc":"北海道代表神社，正月初詣氣氛特別。","travel":35,"transport":"地下鐵+步行","otaruKm":null,"chome":null,"googleRating":null,"googleReviews":null,"tabelogRating":null,"tabelogUrl":null,"officialUrl":null,"winter":true,"featured":false,"group":"文化歷史","typeBucket":"spot"},{"scope":"sapporo2h","cn":"圓山動物園","jp":"札幌市円山動物園","category":"動物園","area":"札幌","desc":"北極熊、雪豹等，冬天也很適合。","travel":40,"transport":"地下鐵+步行","otaruKm":null,"chome":null,"googleRating":null,"googleReviews":null,"tabelogRating":null,"tabelogUrl":null,"officialUrl":null,"winter":true,"featured":false,"group":"自然休閒","typeBucket":"spot"},{"scope":"sapporo2h","cn":"大倉山跳台競技場","jp":"大倉山ジャンプ競技場","category":"展望","area":"札幌","desc":"搭纜椅到跳台上方看札幌市景。","travel":45,"transport":"地下鐵+巴士","otaruKm":null,"chome":null,"googleRating":null,"googleReviews":null,"tabelogRating":null,"tabelogUrl":null,"officialUrl":null,"winter":true,"featured":false,"group":"景點體驗","typeBucket":"spot"},{"scope":"sapporo2h","cn":"藻岩山夜景","jp":"藻岩山","category":"展望","area":"札幌","desc":"札幌代表夜景，冬季注意纜車營運與風雪。","travel":45,"transport":"市電+接駁","otaruKm":null,"chome":null,"googleRating":null,"googleReviews":null,"tabelogRating":null,"tabelogUrl":null,"officialUrl":null,"winter":true,"featured":false,"group":"景點體驗","typeBucket":"spot"},{"scope":"sapporo2h","cn":"羊之丘展望台","jp":"さっぽろ羊ヶ丘展望台","category":"展望","area":"札幌","desc":"克拉克博士像、雪原與札幌圓頂景。","travel":45,"transport":"地下鐵+巴士","otaruKm":null,"chome":null,"googleRating":null,"googleReviews":null,"tabelogRating":null,"tabelogUrl":null,"officialUrl":null,"winter":true,"featured":false,"group":"景點體驗","typeBucket":"spot"},{"scope":"sapporo2h","cn":"札幌藝術之森","jp":"札幌芸術の森","category":"美術館","area":"札幌","desc":"戶外雕塑、工藝與美術館，冬季有不同景色。","travel":55,"transport":"地下鐵+巴士","otaruKm":null,"chome":null,"googleRating":null,"googleReviews":null,"tabelogRating":null,"tabelogUrl":null,"officialUrl":null,"winter":true,"featured":false,"group":"文化歷史","typeBucket":"spot"},{"scope":"sapporo2h","cn":"北海道開拓之村","jp":"北海道開拓の村","category":"歷史","area":"札幌","desc":"大型戶外歷史村，雪中老建築很有北海道感。","travel":55,"transport":"JR/地下鐵+巴士","otaruKm":null,"chome":null,"googleRating":null,"googleReviews":null,"tabelogRating":null,"tabelogUrl":null,"officialUrl":null,"winter":true,"featured":false,"group":"文化歷史","typeBucket":"spot"},{"scope":"sapporo2h","cn":"莫埃來沼公園","jp":"モエレ沼公園","category":"公園","area":"札幌","desc":"Isamu Noguchi設計的大型公園，冬季雪景。","travel":60,"transport":"地下鐵+巴士","otaruKm":null,"chome":null,"googleRating":null,"googleReviews":null,"tabelogRating":null,"tabelogUrl":null,"officialUrl":null,"winter":true,"featured":false,"group":"自然休閒","typeBucket":"spot"},{"scope":"sapporo2h","cn":"瀧野鈴蘭丘陵公園","jp":"国営滝野すずらん丘陵公園","category":"公園","area":"札幌","desc":"冬季玩雪、雪鞋與雪上活動。","travel":70,"transport":"地下鐵+巴士","otaruKm":null,"chome":null,"googleRating":null,"googleReviews":null,"tabelogRating":null,"tabelogUrl":null,"officialUrl":null,"winter":true,"featured":false,"group":"自然休閒","typeBucket":"spot"},{"scope":"sapporo2h","cn":"定山溪溫泉街","jp":"定山渓温泉","category":"溫泉","area":"定山溪","desc":"札幌近郊代表溫泉區，冬天很適合一日泡湯。","travel":70,"transport":"直達巴士","otaruKm":null,"chome":null,"googleRating":null,"googleReviews":null,"tabelogRating":null,"tabelogUrl":null,"officialUrl":null,"winter":true,"featured":false,"group":"自然休閒","typeBucket":"spot"},{"scope":"sapporo2h","cn":"定山源泉公園","jp":"定山源泉公園","category":"公園","area":"定山溪","desc":"足湯與溫泉源頭小公園。","travel":72,"transport":"直達巴士+步行","otaruKm":null,"chome":null,"googleRating":null,"googleReviews":null,"tabelogRating":null,"tabelogUrl":null,"officialUrl":null,"winter":true,"featured":false,"group":"自然休閒","typeBucket":"spot"},{"scope":"sapporo2h","cn":"二見吊橋","jp":"二見吊橋","category":"自然","area":"定山溪","desc":"定山溪溪谷代表景觀，冬季注意積雪。","travel":75,"transport":"直達巴士+步行","otaruKm":null,"chome":null,"googleRating":null,"googleReviews":null,"tabelogRating":null,"tabelogUrl":null,"officialUrl":null,"winter":true,"featured":false,"group":"自然休閒","typeBucket":"spot"},{"scope":"sapporo2h","cn":"豐平峽溫泉","jp":"豊平峡温泉","category":"溫泉","area":"定山溪","desc":"大型露天風呂與印度咖哩聞名。","travel":85,"transport":"巴士","otaruKm":null,"chome":null,"googleRating":null,"googleReviews":null,"tabelogRating":null,"tabelogUrl":null,"officialUrl":null,"winter":true,"featured":false,"group":"自然休閒","typeBucket":"spot"},{"scope":"sapporo2h","cn":"小樽運河","jp":"小樽運河","category":"景點","area":"小樽","desc":"札幌最經典近郊日歸，冬季傍晚非常漂亮。","travel":45,"transport":"JR+步行","otaruKm":null,"chome":null,"googleRating":4.4,"googleReviews":6958,"tabelogRating":null,"tabelogUrl":null,"officialUrl":null,"winter":true,"featured":false,"group":"景點體驗","typeBucket":"spot"},{"scope":"sapporo2h","cn":"小樽堺町通","jp":"小樽堺町通り","category":"商店","area":"小樽","desc":"玻璃、音樂盒、甜點與伴手禮集中。","travel":55,"transport":"JR+步行","otaruKm":null,"chome":null,"googleRating":null,"googleReviews":null,"tabelogRating":null,"tabelogUrl":null,"officialUrl":null,"winter":true,"featured":false,"group":"購物市場","typeBucket":"shop"},{"scope":"sapporo2h","cn":"小樽天狗山","jp":"小樽天狗山","category":"展望","area":"小樽","desc":"纜車夜景、雪景與滑雪場。","travel":70,"transport":"JR+巴士","otaruKm":null,"chome":null,"googleRating":null,"googleReviews":null,"tabelogRating":null,"tabelogUrl":null,"officialUrl":null,"winter":true,"featured":false,"group":"景點體驗","typeBucket":"spot"},{"scope":"sapporo2h","cn":"余市 NIKKA 威士忌蒸餾所","jp":"ニッカウヰスキー余市蒸溜所","category":"景點","area":"余市","desc":"威士忌蒸餾所與展示，部分參觀需預約。","travel":80,"transport":"JR/巴士+步行","otaruKm":null,"chome":null,"googleRating":null,"googleReviews":null,"tabelogRating":null,"tabelogUrl":null,"officialUrl":null,"winter":true,"featured":false,"group":"景點體驗","typeBucket":"spot"},{"scope":"sapporo2h","cn":"ES CON FIELD 北海道棒球場","jp":"エスコンフィールドHOKKAIDO","category":"景點","area":"北廣島","desc":"新型棒球場與F VILLAGE複合園區。","travel":35,"transport":"JR+步行/接駁","otaruKm":null,"chome":null,"googleRating":null,"googleReviews":null,"tabelogRating":null,"tabelogUrl":null,"officialUrl":null,"winter":true,"featured":false,"group":"景點體驗","typeBucket":"spot"},{"scope":"sapporo2h","cn":"千歲水族館","jp":"サケのふるさと 千歳水族館","category":"水族館","area":"千歲","desc":"鮭魚、生態展示，JR千歲站可達。","travel":45,"transport":"JR+步行","otaruKm":null,"chome":null,"googleRating":null,"googleReviews":null,"tabelogRating":null,"tabelogUrl":null,"officialUrl":null,"winter":true,"featured":false,"group":"自然休閒","typeBucket":"spot"},{"scope":"sapporo2h","cn":"新千歲機場哆啦A夢空中樂園","jp":"ドラえもん わくわくスカイパーク","category":"娛樂","area":"新千歲機場","desc":"最後一天也能排，機場內親子娛樂。","travel":50,"transport":"JR","otaruKm":null,"chome":null,"googleRating":null,"googleReviews":null,"tabelogRating":null,"tabelogUrl":null,"officialUrl":null,"winter":true,"featured":false,"group":"景點體驗","typeBucket":"spot"},{"scope":"sapporo2h","cn":"Royce' Chocolate World","jp":"ロイズ チョコレートワールド","category":"甜點","area":"新千歲機場","desc":"機場內巧克力展示、工房與伴手禮。","travel":50,"transport":"JR","otaruKm":null,"chome":null,"googleRating":null,"googleReviews":null,"tabelogRating":3.32,"tabelogUrl":"https://tabelog.com/hokkaido/A0107/A010701/1034988/","officialUrl":null,"winter":true,"featured":false,"tabelogReviews":370,"tabelogChecked":"2026-08-17","tabelogStatus":"rated","group":"餐飲甜點","typeBucket":"food"},{"scope":"sapporo2h","cn":"支笏湖溫泉街／支笏湖","jp":"支笏湖","category":"自然","area":"支笏湖","desc":"透明湖水、溫泉與冬季冰濤祭；需確認冬季巴士。","travel":105,"transport":"JR至千歲+巴士","otaruKm":null,"chome":null,"googleRating":null,"googleReviews":null,"tabelogRating":null,"tabelogUrl":null,"officialUrl":null,"winter":true,"featured":false,"group":"自然休閒","typeBucket":"spot"},{"scope":"sapporo2h","cn":"白老 Upopoy 民族共生象徵空間","jp":"ウポポイ","category":"博物館","area":"白老","desc":"國立愛努民族博物館與民族共生公園。","travel":90,"transport":"JR特急+步行","otaruKm":null,"chome":null,"googleRating":null,"googleReviews":null,"tabelogRating":null,"tabelogUrl":null,"officialUrl":null,"winter":true,"featured":false,"group":"文化歷史","typeBucket":"spot"},{"scope":"sapporo2h","cn":"登別地獄谷","jp":"登別地獄谷","category":"自然","area":"登別","desc":"火山地形與溫泉煙霧，冬季景色特殊。","travel":110,"transport":"JR特急+巴士","otaruKm":null,"chome":null,"googleRating":null,"googleReviews":null,"tabelogRating":null,"tabelogUrl":null,"officialUrl":null,"winter":true,"featured":false,"group":"自然休閒","typeBucket":"spot"},{"scope":"sapporo2h","cn":"登別溫泉街","jp":"登別温泉","category":"溫泉","area":"登別","desc":"一日泡湯或住一晚都適合。","travel":110,"transport":"JR特急+巴士","otaruKm":null,"chome":null,"googleRating":null,"googleReviews":null,"tabelogRating":null,"tabelogUrl":null,"officialUrl":null,"winter":true,"featured":false,"group":"自然休閒","typeBucket":"spot"},{"scope":"sapporo2h","cn":"苫小牧海之驛 Plat Seaport Market","jp":"海の駅ぷらっとみなと市場","category":"市場","area":"苫小牧","desc":"海鮮、北寄貝與市場餐飲。","travel":85,"transport":"JR+步行/計程車","otaruKm":null,"chome":null,"googleRating":null,"googleReviews":null,"tabelogRating":null,"tabelogUrl":null,"officialUrl":null,"winter":true,"featured":false,"group":"購物市場","typeBucket":"shop"},{"scope":"sapporo2h","cn":"岩見澤公園玫瑰園","jp":"いわみざわ公園バラ園","category":"公園","area":"岩見澤","desc":"冬季花園本體非旺季，較適合非冬季。","travel":70,"transport":"JR+巴士","otaruKm":null,"chome":null,"googleRating":null,"googleReviews":null,"tabelogRating":null,"tabelogUrl":null,"officialUrl":null,"winter":false,"featured":false,"group":"自然休閒","typeBucket":"spot"},{"scope":"sapporo2h","cn":"Arte Piazza 美唄","jp":"アルテピアッツァ美唄","category":"美術館","area":"美唄","desc":"舊校舍與安田侃雕塑，雪景很有氛圍。","travel":85,"transport":"JR+巴士","otaruKm":null,"chome":null,"googleRating":null,"googleReviews":null,"tabelogRating":null,"tabelogUrl":null,"officialUrl":null,"winter":true,"featured":false,"group":"文化歷史","typeBucket":"spot"},{"scope":"sapporo2h","cn":"砂川甜點之路","jp":"すながわスイートロード","category":"甜點區","area":"砂川","desc":"甜點店密集區，可搭JR做半日小旅行。","travel":80,"transport":"JR+步行/計程車","otaruKm":null,"chome":null,"googleRating":null,"googleReviews":null,"tabelogRating":null,"tabelogUrl":null,"officialUrl":null,"winter":true,"featured":false,"tabelogReviews":null,"tabelogChecked":"2026-08-17","tabelogStatus":"complex","tabelogNote":"區域型甜點路線；由多間甜點店組成，沒有單一 Tabelog 總分。","group":"餐飲甜點","typeBucket":"spot"},{"scope":"sapporo2h","cn":"SHIRO 砂川本店／大家的工廠","jp":"SHIRO みんなの工場","category":"商店","area":"砂川","desc":"SHIRO工廠、商店與咖啡空間。","travel":95,"transport":"JR+巴士/計程車","otaruKm":null,"chome":null,"googleRating":null,"googleReviews":null,"tabelogRating":null,"tabelogUrl":null,"officialUrl":null,"winter":true,"featured":false,"group":"購物市場","typeBucket":"shop"},{"scope":"sapporo2h","cn":"石狩燈台／石狩川河口","jp":"石狩灯台","category":"自然","area":"石狩","desc":"海岸、燈塔與雪景；冬季巴士班次要確認。","travel":95,"transport":"巴士","otaruKm":null,"chome":null,"googleRating":null,"googleReviews":null,"tabelogRating":null,"tabelogUrl":null,"officialUrl":null,"winter":true,"featured":false,"group":"自然休閒","typeBucket":"spot"},{"scope":"otaru5","cn":"三角市場","jp":"三角市場","category":"市場","area":"小樽站5km圈","desc":"小樽站旁海鮮市場，早上吃海鮮丼最方便。","travel":null,"transport":null,"otaruKm":0.2,"chome":null,"googleRating":3.9,"googleReviews":7360,"tabelogRating":null,"tabelogUrl":null,"officialUrl":null,"winter":true,"featured":false,"group":"購物市場","typeBucket":"shop"},{"scope":"otaru5","cn":"北之丼屋 瀧波食堂","jp":"北のどんぶり屋 滝波食堂","category":"餐廳","area":"小樽站5km圈","desc":"三角市場內超人氣海鮮丼，常排隊。","travel":null,"transport":null,"otaruKm":0.2,"chome":null,"googleRating":4.2,"googleReviews":3053,"tabelogRating":3.54,"tabelogUrl":"https://tabelog.com/hokkaido/A0106/A010601/1027887/","officialUrl":null,"winter":true,"featured":false,"tabelogReviews":1368,"tabelogChecked":"2026-08-17","tabelogStatus":"rated","group":"餐飲甜點","typeBucket":"food"},{"scope":"otaru5","cn":"小樽都通商店街","jp":"小樽都通り商店街","category":"商店","area":"小樽站5km圈","desc":"車站通往運河方向的在地商店街。","travel":null,"transport":null,"otaruKm":0.4,"chome":null,"googleRating":3.6,"googleReviews":164,"tabelogRating":null,"tabelogUrl":null,"officialUrl":null,"winter":true,"featured":false,"group":"購物市場","typeBucket":"shop"},{"scope":"otaru5","cn":"若雞時代 NARUTO 本店","jp":"若鶏時代 なると 本店","category":"餐廳","area":"小樽站5km圈","desc":"小樽名物若雞半身炸雞，本店距車站很近。","travel":null,"transport":null,"otaruKm":0.5,"chome":null,"googleRating":4.1,"googleReviews":6704,"tabelogRating":3.52,"tabelogUrl":"https://tabelog.com/hokkaido/A0106/A010601/1000906/","officialUrl":null,"winter":true,"featured":false,"tabelogReviews":2040,"tabelogChecked":"2026-08-17","tabelogStatus":"rated","group":"餐飲甜點","typeBucket":"food"},{"scope":"otaru5","cn":"小樽蕎麥屋 藪半","jp":"小樽・蕎麦屋・籔半","category":"餐廳","area":"小樽站5km圈","desc":"1954年創業的老字號蕎麥店。","travel":null,"transport":null,"otaruKm":0.4,"chome":null,"googleRating":null,"googleReviews":null,"tabelogRating":3.63,"tabelogUrl":"https://tabelog.com/hokkaido/A0106/A010601/1000420/","officialUrl":null,"winter":true,"featured":false,"tabelogReviews":429,"tabelogChecked":"2026-08-17","tabelogStatus":"rated","group":"餐飲甜點","typeBucket":"food"},{"scope":"otaru5","cn":"小樽政壽司 本店","jp":"おたる政寿司 本店","category":"餐廳","area":"小樽站5km圈","desc":"小樽代表壽司名店之一。","travel":null,"transport":null,"otaruKm":0.8,"chome":null,"googleRating":4.2,"googleReviews":2892,"tabelogRating":3.58,"tabelogUrl":"https://tabelog.com/hokkaido/A0106/A010601/1000209/","officialUrl":null,"winter":true,"featured":false,"tabelogReviews":1046,"tabelogChecked":"2026-08-17","tabelogStatus":"rated","group":"餐飲甜點","typeBucket":"food"},{"scope":"otaru5","cn":"日本銀行舊小樽支店 金融資料館","jp":"日本銀行旧小樽支店 金融資料館","category":"博物館","area":"小樽站5km圈","desc":"免費金融歷史展館，建築本身也值得看。","travel":null,"transport":null,"otaruKm":0.7,"chome":null,"googleRating":null,"googleReviews":null,"tabelogRating":null,"tabelogUrl":null,"officialUrl":null,"winter":true,"featured":false,"group":"文化歷史","typeBucket":"spot"},{"scope":"otaru5","cn":"舊手宮線遺跡","jp":"旧手宮線","category":"歷史","area":"小樽站5km圈","desc":"廢線鐵道散步路，冬天拍照很有味道。","travel":null,"transport":null,"otaruKm":0.7,"chome":null,"googleRating":null,"googleReviews":null,"tabelogRating":null,"tabelogUrl":null,"officialUrl":null,"winter":true,"featured":false,"group":"文化歷史","typeBucket":"spot"},{"scope":"otaru5","cn":"小樽藝術村","jp":"小樽芸術村","category":"美術館","area":"小樽站5km圈","desc":"歷史銀行建築、彩繪玻璃與藝術收藏。","travel":null,"transport":null,"otaruKm":0.8,"chome":null,"googleRating":4.2,"googleReviews":897,"tabelogRating":null,"tabelogUrl":null,"officialUrl":null,"winter":true,"featured":false,"group":"文化歷史","typeBucket":"spot"},{"scope":"otaru5","cn":"小樽運河","jp":"小樽運河","category":"景點","area":"小樽站5km圈","desc":"小樽代表景點，冬季傍晚點燈特別漂亮。","travel":null,"transport":null,"otaruKm":0.9,"chome":null,"googleRating":4.4,"googleReviews":6958,"tabelogRating":null,"tabelogUrl":null,"officialUrl":null,"winter":true,"featured":false,"group":"景點體驗","typeBucket":"spot"},{"scope":"otaru5","cn":"淺草橋街園","jp":"浅草橋街園","category":"展望","area":"小樽站5km圈","desc":"拍小樽運河經典角度的熱門位置。","travel":null,"transport":null,"otaruKm":1.0,"chome":null,"googleRating":null,"googleReviews":null,"tabelogRating":null,"tabelogUrl":null,"officialUrl":null,"winter":true,"featured":false,"group":"景點體驗","typeBucket":"spot"},{"scope":"otaru5","cn":"小樽運河遊船","jp":"小樽運河クルーズ","category":"體驗","area":"小樽站5km圈","desc":"從水面看倉庫群與運河，冬季依天候營運。","travel":null,"transport":null,"otaruKm":0.9,"chome":null,"googleRating":null,"googleReviews":null,"tabelogRating":null,"tabelogUrl":null,"officialUrl":null,"winter":true,"featured":false,"group":"景點體驗","typeBucket":"spot"},{"scope":"otaru5","cn":"小樽出拔小路","jp":"小樽出抜小路","category":"餐飲街","area":"小樽站5km圈","desc":"復古風小巷餐飲聚落，晚上氣氛好。","travel":null,"transport":null,"otaruKm":0.9,"chome":null,"googleRating":4.0,"googleReviews":678,"tabelogRating":null,"tabelogUrl":null,"officialUrl":null,"winter":true,"featured":false,"tabelogReviews":null,"tabelogChecked":"2026-08-17","tabelogStatus":"complex","tabelogNote":"複合餐飲街；各店分別評分，沒有單一 Tabelog 總分。","group":"餐飲甜點","typeBucket":"food"},{"scope":"otaru5","cn":"小樽啤酒 小樽倉庫No.1","jp":"小樽ビール 小樽倉庫No.1","category":"餐廳","area":"小樽站5km圈","desc":"運河倉庫內喝現釀德式啤酒與餐點。","travel":null,"transport":null,"otaruKm":1.0,"chome":null,"googleRating":null,"googleReviews":null,"tabelogRating":3.59,"tabelogUrl":"https://tabelog.com/hokkaido/A0106/A010601/1000286/","officialUrl":null,"winter":true,"featured":false,"tabelogReviews":1020,"tabelogChecked":"2026-08-17","tabelogStatus":"rated","group":"餐飲甜點","typeBucket":"food"},{"scope":"otaru5","cn":"小樽堺町通商店街","jp":"小樽堺町通り","category":"商店","area":"小樽站5km圈","desc":"玻璃、甜點、音樂盒、雜貨最密集的散步街。","travel":null,"transport":null,"otaruKm":1.2,"chome":null,"googleRating":null,"googleReviews":null,"tabelogRating":null,"tabelogUrl":null,"officialUrl":null,"winter":true,"featured":false,"group":"購物市場","typeBucket":"shop"},{"scope":"otaru5","cn":"大正硝子館 本店","jp":"大正硝子館 本店","category":"商店","area":"小樽站5km圈","desc":"玻璃工藝、器皿與伴手禮。","travel":null,"transport":null,"otaruKm":1.0,"chome":null,"googleRating":null,"googleReviews":null,"tabelogRating":null,"tabelogUrl":null,"officialUrl":null,"winter":true,"featured":false,"group":"購物市場","typeBucket":"shop"},{"scope":"otaru5","cn":"小樽浪漫館","jp":"小樽浪漫館","category":"商店","area":"小樽站5km圈","desc":"復古建築內販售飾品與雜貨。","travel":null,"transport":null,"otaruKm":1.0,"chome":null,"googleRating":null,"googleReviews":null,"tabelogRating":null,"tabelogUrl":null,"officialUrl":null,"winter":true,"featured":false,"group":"購物市場","typeBucket":"shop"},{"scope":"otaru5","cn":"小樽百貨 UNGA↑","jp":"小樽百貨 UNGA↑","category":"商店","area":"小樽站5km圈","desc":"在地選物、伴手禮與小樽特色商品。","travel":null,"transport":null,"otaruKm":1.0,"chome":null,"googleRating":null,"googleReviews":null,"tabelogRating":null,"tabelogUrl":null,"officialUrl":null,"winter":true,"featured":false,"group":"購物市場","typeBucket":"shop"},{"scope":"otaru5","cn":"蒲榮工廠直營店","jp":"かま栄 工場直売店","category":"商店","area":"小樽站5km圈","desc":"小樽代表魚板店，可買現炸魚板與伴手禮。","travel":null,"transport":null,"otaruKm":1.2,"chome":null,"googleRating":null,"googleReviews":null,"tabelogRating":null,"tabelogUrl":null,"officialUrl":null,"winter":true,"featured":false,"group":"購物市場","typeBucket":"shop"},{"scope":"otaru5","cn":"小樽竹乃壽司（Takeno）","jp":"小樽たけの寿司","category":"餐廳","area":"小樽站5km圈","desc":"堺町通附近壽司、海鮮丼。","travel":null,"transport":null,"otaruKm":1.2,"chome":null,"googleRating":null,"googleReviews":null,"tabelogRating":3.27,"tabelogUrl":"https://tabelog.com/hokkaido/A0106/A010601/1040569/","officialUrl":null,"winter":true,"featured":false,"tabelogReviews":74,"tabelogChecked":"2026-08-17","tabelogStatus":"rated","group":"餐飲甜點","typeBucket":"food"},{"scope":"otaru5","cn":"北一硝子三號館","jp":"北一硝子三号館","category":"商店","area":"小樽站5km圈","desc":"小樽玻璃代表店，器皿與燈具非常有特色。","travel":null,"transport":null,"otaruKm":1.4,"chome":null,"googleRating":null,"googleReviews":null,"tabelogRating":null,"tabelogUrl":null,"officialUrl":null,"winter":true,"featured":false,"group":"購物市場","typeBucket":"shop"},{"scope":"otaru5","cn":"北一HALL","jp":"北一ホール","category":"咖啡","area":"小樽站5km圈","desc":"煤油燈點亮的夢幻咖啡廳空間。","travel":null,"transport":null,"otaruKm":1.4,"chome":null,"googleRating":null,"googleReviews":null,"tabelogRating":3.59,"tabelogUrl":"https://tabelog.com/hokkaido/A0106/A010601/1000052/","officialUrl":null,"winter":true,"featured":false,"tabelogReviews":925,"tabelogChecked":"2026-08-17","tabelogStatus":"rated","group":"餐飲甜點","typeBucket":"food"},{"scope":"otaru5","cn":"北一威尼斯美術館","jp":"北一ヴェネツィア美術館","category":"美術館","area":"小樽站5km圈","desc":"威尼斯玻璃、宮殿風展館。","travel":null,"transport":null,"otaruKm":1.4,"chome":null,"googleRating":null,"googleReviews":null,"tabelogRating":null,"tabelogUrl":null,"officialUrl":null,"winter":true,"featured":false,"group":"文化歷史","typeBucket":"spot"},{"scope":"otaru5","cn":"LeTAO Pathos","jp":"ルタオ パトス","category":"甜點","area":"小樽站5km圈","desc":"LeTAO大型甜點店、咖啡與伴手禮。","travel":null,"transport":null,"otaruKm":1.5,"chome":null,"googleRating":4.2,"googleReviews":2751,"tabelogRating":3.42,"tabelogUrl":"https://tabelog.com/hokkaido/A0106/A010601/1033815/","officialUrl":null,"winter":true,"featured":false,"tabelogReviews":677,"tabelogChecked":"2026-08-17","tabelogStatus":"rated","group":"餐飲甜點","typeBucket":"food"},{"scope":"otaru5","cn":"六花亭 小樽運河店","jp":"六花亭 小樽運河店","category":"甜點","area":"小樽站5km圈","desc":"北海道經典甜點伴手禮。","travel":null,"transport":null,"otaruKm":1.5,"chome":null,"googleRating":null,"googleReviews":null,"tabelogRating":3.41,"tabelogUrl":"https://tabelog.com/hokkaido/A0106/A010601/1006989/","officialUrl":null,"winter":true,"featured":false,"tabelogReviews":570,"tabelogChecked":"2026-08-17","tabelogStatus":"rated","group":"餐飲甜點","typeBucket":"food"},{"scope":"otaru5","cn":"北菓樓 小樽本館","jp":"北菓楼 小樽本館","category":"甜點","area":"小樽站5km圈","desc":"妖精之森年輪蛋糕、泡芙與伴手禮。","travel":null,"transport":null,"otaruKm":1.5,"chome":null,"googleRating":null,"googleReviews":null,"tabelogRating":3.36,"tabelogUrl":"https://tabelog.com/hokkaido/A0106/A010601/1006906/","officialUrl":null,"winter":true,"featured":false,"tabelogReviews":430,"tabelogChecked":"2026-08-17","tabelogStatus":"rated","group":"餐飲甜點","typeBucket":"food"},{"scope":"otaru5","cn":"小樽音樂盒堂 本館","jp":"小樽オルゴール堂 本館","category":"商店","area":"小樽站5km圈","desc":"小樽最具代表性的音樂盒商店與歷史建築。","travel":null,"transport":null,"otaruKm":1.7,"chome":null,"googleRating":4.2,"googleReviews":13260,"tabelogRating":null,"tabelogUrl":null,"officialUrl":null,"winter":true,"featured":false,"group":"購物市場","typeBucket":"shop"},{"scope":"otaru5","cn":"小樽蒸汽鐘","jp":"蒸気時計","category":"景點","area":"小樽站5km圈","desc":"音樂盒堂前地標，固定時間鳴笛。","travel":null,"transport":null,"otaruKm":1.7,"chome":null,"googleRating":4.5,"googleReviews":1184,"tabelogRating":null,"tabelogUrl":null,"officialUrl":null,"winter":true,"featured":false,"group":"景點體驗","typeBucket":"spot"},{"scope":"otaru5","cn":"童話十字路口","jp":"メルヘン交差点","category":"景點","area":"小樽站5km圈","desc":"堺町通南端經典街景與拍照點。","travel":null,"transport":null,"otaruKm":1.7,"chome":null,"googleRating":null,"googleReviews":null,"tabelogRating":null,"tabelogUrl":null,"officialUrl":null,"winter":true,"featured":false,"group":"景點體驗","typeBucket":"spot"},{"scope":"otaru5","cn":"LeTAO 總店","jp":"ルタオ本店","category":"甜點","area":"小樽站5km圈","desc":"招牌雙層起司蛋糕，可上樓看街景。","travel":null,"transport":null,"otaruKm":1.7,"chome":null,"googleRating":4.3,"googleReviews":3772,"tabelogRating":3.55,"tabelogUrl":"https://tabelog.com/hokkaido/A0106/A010601/1000304/","officialUrl":null,"winter":true,"featured":false,"tabelogReviews":2604,"tabelogChecked":"2026-08-17","tabelogStatus":"rated","group":"餐飲甜點","typeBucket":"food"},{"scope":"otaru5","cn":"水天宮","jp":"水天宮","category":"神社","area":"小樽站5km圈","desc":"小樽高地神社，可眺望港灣與市區。","travel":null,"transport":null,"otaruKm":1.5,"chome":null,"googleRating":null,"googleReviews":null,"tabelogRating":null,"tabelogUrl":null,"officialUrl":null,"winter":true,"featured":false,"group":"文化歷史","typeBucket":"spot"},{"scope":"otaru5","cn":"小樽公園","jp":"小樽公園","category":"公園","area":"小樽站5km圈","desc":"在地公園與雪景散步區。","travel":null,"transport":null,"otaruKm":1.4,"chome":null,"googleRating":null,"googleReviews":null,"tabelogRating":null,"tabelogUrl":null,"officialUrl":null,"winter":true,"featured":false,"group":"自然休閒","typeBucket":"spot"},{"scope":"otaru5","cn":"住吉神社","jp":"住吉神社","category":"神社","area":"小樽站5km圈","desc":"小樽重要神社，長階梯與港灣方向景色。","travel":null,"transport":null,"otaruKm":2.0,"chome":null,"googleRating":null,"googleReviews":null,"tabelogRating":null,"tabelogUrl":null,"officialUrl":null,"winter":true,"featured":false,"group":"文化歷史","typeBucket":"spot"},{"scope":"otaru5","cn":"田中酒造 本店","jp":"田中酒造 本店","category":"商店","area":"小樽站5km圈","desc":"小樽在地清酒，可買酒與參觀。","travel":null,"transport":null,"otaruKm":1.5,"chome":null,"googleRating":null,"googleReviews":null,"tabelogRating":null,"tabelogUrl":null,"officialUrl":null,"winter":true,"featured":false,"group":"購物市場","typeBucket":"shop"},{"scope":"otaru5","cn":"田中酒造 龜甲藏","jp":"田中酒造 亀甲蔵","category":"體驗","area":"小樽站5km圈","desc":"歷史石造酒藏、釀造展示與試飲。","travel":null,"transport":null,"otaruKm":2.4,"chome":null,"googleRating":null,"googleReviews":null,"tabelogRating":null,"tabelogUrl":null,"officialUrl":null,"winter":true,"featured":false,"group":"景點體驗","typeBucket":"spot"},{"scope":"otaru5","cn":"小樽市綜合博物館 運河館","jp":"小樽市総合博物館 運河館","category":"博物館","area":"小樽站5km圈","desc":"港都與城市歷史展示。","travel":null,"transport":null,"otaruKm":1.0,"chome":null,"googleRating":null,"googleReviews":null,"tabelogRating":null,"tabelogUrl":null,"officialUrl":null,"winter":true,"featured":false,"group":"文化歷史","typeBucket":"spot"},{"scope":"otaru5","cn":"小樽市綜合博物館 本館","jp":"小樽市総合博物館 本館","category":"博物館","area":"小樽站5km圈","desc":"鐵道、科學與北海道交通史。","travel":null,"transport":null,"otaruKm":2.0,"chome":null,"googleRating":null,"googleReviews":null,"tabelogRating":null,"tabelogUrl":null,"officialUrl":null,"winter":true,"featured":false,"group":"文化歷史","typeBucket":"spot"},{"scope":"otaru5","cn":"舊日本郵船小樽支店","jp":"旧日本郵船小樽支店","category":"歷史","area":"小樽站5km圈","desc":"北運河一帶重要歷史建築。","travel":null,"transport":null,"otaruKm":1.9,"chome":null,"googleRating":null,"googleReviews":null,"tabelogRating":null,"tabelogUrl":null,"officialUrl":null,"winter":true,"featured":false,"group":"文化歷史","typeBucket":"spot"},{"scope":"otaru5","cn":"北運河","jp":"北運河","category":"景點","area":"小樽站5km圈","desc":"比南段運河更安靜、保留較寬水道與港町感。","travel":null,"transport":null,"otaruKm":1.8,"chome":null,"googleRating":null,"googleReviews":null,"tabelogRating":null,"tabelogUrl":null,"officialUrl":null,"winter":true,"featured":false,"group":"景點體驗","typeBucket":"spot"},{"scope":"otaru5","cn":"小樽天狗山纜車","jp":"小樽天狗山ロープウェイ","category":"展望","area":"小樽站5km圈","desc":"纜車上山看小樽港夜景，冬天也可滑雪。","travel":null,"transport":null,"otaruKm":3.3,"chome":null,"googleRating":4.2,"googleReviews":121,"tabelogRating":null,"tabelogUrl":null,"officialUrl":null,"winter":true,"featured":false,"group":"景點體驗","typeBucket":"spot"},{"scope":"otaru5","cn":"Wing Bay 小樽","jp":"ウイングベイ小樽","category":"商店","area":"小樽站5km圈","desc":"大型購物中心、餐廳與電影院，JR小樽築港站直結。","travel":null,"transport":null,"otaruKm":3.4,"chome":null,"googleRating":null,"googleReviews":null,"tabelogRating":null,"tabelogUrl":null,"officialUrl":null,"winter":true,"featured":false,"group":"購物市場","typeBucket":"shop"},{"scope":"otaru5","cn":"AEON 小樽店","jp":"イオン小樽店","category":"商店","area":"小樽站5km圈","desc":"大型超市與購物，補貨實用。","travel":null,"transport":null,"otaruKm":3.4,"chome":null,"googleRating":3.7,"googleReviews":2208,"tabelogRating":null,"tabelogUrl":null,"officialUrl":null,"winter":true,"featured":false,"group":"購物市場","typeBucket":"shop"},{"scope":"otaru5","cn":"小樽築港港灣散步區","jp":"小樽築港周辺","category":"景點","area":"小樽站5km圈","desc":"海邊與大型商場一帶，適合順遊。","travel":null,"transport":null,"otaruKm":3.5,"chome":null,"googleRating":null,"googleReviews":null,"tabelogRating":null,"tabelogUrl":null,"officialUrl":null,"winter":true,"featured":false,"group":"景點體驗","typeBucket":"spot"}];
+let scope='tanuki';
+let typeFilter='spot';
+let placesLibReady=false;
+
+const esc = s => String(s??'').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const enc = encodeURIComponent;
+
+function fallbackSvg(p){
+  const iconMap={
+    '餐廳':'🍽️','餐飲街':'🍢','甜點':'🍰','咖啡':'☕','商店':'🛍️','藥妝':'💊','市場':'🦀','景點':'📷',
+    '神社':'⛩️','水族館':'🐟','動物園':'🐻','博物館':'🏛️','美術館':'🖼️','歷史':'🏚️','自然':'🏔️',
+    '公園':'🌲','溫泉':'♨️','展望':'🌃','娛樂':'🎡','體驗':'✨'
+  };
+  const icon=iconMap[p.category]||'📍';
+  const label=(p.cn||'北海道').slice(0,12);
+  const svg=`<svg xmlns="http://www.w3.org/2000/svg" width="800" height="460">
+  <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#172554"/><stop offset=".55" stop-color="#3157d5"/><stop offset="1" stop-color="#6c42d8"/></linearGradient></defs>
+  <rect width="100%" height="100%" fill="url(#g)"/>
+  <circle cx="690" cy="70" r="130" fill="rgba(255,255,255,.09)"/><circle cx="90" cy="420" r="180" fill="rgba(255,255,255,.06)"/>
+  <text x="42" y="175" font-size="94">${icon}</text>
+  <text x="45" y="270" fill="white" font-family="sans-serif" font-size="42" font-weight="700">${esc(label)}</text>
+  <text x="47" y="320" fill="#dbe5ff" font-family="sans-serif" font-size="24">${esc(p.category)} · ${esc(p.area)}</text>
+  <text x="47" y="395" fill="#fff" opacity=".75" font-family="sans-serif" font-size="18">預覽圖｜最新實景照片請按 Google Maps</text>
+  </svg>`;
+  return 'data:image/svg+xml;charset=utf-8,'+encodeURIComponent(svg);
+}
+
+function mapsUrl(p){
+  return 'https://www.google.com/maps/search/?api=1&query='+enc((p.jp||p.cn)+' '+(p.area||'')+' 北海道');
+}
+function tabelogSearch(p){
+  if(p.tabelogUrl) return p.tabelogUrl;
+  return 'https://tabelog.com/rstLst/?vs=1&sa=&sk='+enc(p.jp||p.cn);
+}
+
+function render(){
+  const q=document.querySelector('#q').value.trim().toLowerCase();
+  const cat=document.querySelector('#category').value;
+  const ratedOnly=document.querySelector('#ratedOnly').value;
+  const tm=Number(document.querySelector('#time').value||0);
+  const ch=document.querySelector('#chome').value;
+  const sort=document.querySelector('#sort').value;
+
+  let rows=DATA.filter(p=>{
+    if(scope!=='all' && p.scope!==scope) return false;
+    if(typeFilter!=='all' && p.typeBucket!==typeFilter) return false;
+    if(cat && p.category!==cat) return false;
+    if(ratedOnly==='tabelog' && p.tabelogRating==null) return false;
+    if(tm && (p.travel==null || p.travel>tm)) return false;
+    if(ch && !(p.chome||'').includes(ch)) return false;
+    if(q){
+      const hay=[p.cn,p.jp,p.category,p.area,p.desc,p.transport].join(' ').toLowerCase();
+      if(!hay.includes(q)) return false;
+    }
+    return true;
+  });
+
+  rows.sort((a,b)=>{
+    if(sort==='featured') return (Number(b.featured)-Number(a.featured)) || ((a.travel??999)-(b.travel??999)) || a.cn.localeCompare(b.cn,'zh-Hant');
+    if(sort==='time') return (a.travel??999)-(b.travel??999);
+    if(sort==='distance') return (a.otaruKm??999)-(b.otaruKm??999);
+    if(sort==='tabelog') return (b.tabelogRating??0)-(a.tabelogRating??0);
+    if(sort==='rating') return (b.googleRating??0)-(a.googleRating??0);
+    return a.cn.localeCompare(b.cn,'zh-Hant');
+  });
+
+  const counts={tanuki:0,sapporo2h:0,otaru5:0};
+  rows.forEach(r=>counts[r.scope]=(counts[r.scope]||0)+1);
+  const foodRows=rows.filter(p=>['餐廳','甜點','咖啡'].includes(p.category));
+  const ratedFood=foodRows.filter(p=>p.tabelogRating!=null).length;
+  const areaLabel={tanuki:'狸小路',sapporo2h:'札幌站 2 小時圈',otaru5:'小樽站 5km',all:'全部區域'}[scope];
+  const typeLabel={spot:'景點',food:'餐廳・甜點',shop:'商店・市場',all:'全部類型'}[typeFilter];
+  document.querySelector('#summary').innerHTML=
+    `<span class="pill"><b>${areaLabel}</b></span>`+
+    `<span class="pill"><b>${typeLabel}</b></span>`+
+    `<span class="pill">共 <b>${rows.length}</b> 筆</span>`+
+    (typeFilter==='food'?`<span class="pill">⭐ 已直接顯示 Tabelog：${ratedFood}/${foodRows.length}</span>`:'')+
+    `<span class="pill">評分查核日：2026/08/17</span>`;
+
+  const grid=document.querySelector('#grid');
+  if(!rows.length){grid.innerHTML='<div class="empty">沒有符合條件的地點，請清除部分篩選條件。</div>';return;}
+
+  const categoryOrder = typeFilter==='food'
+    ? ['餐廳','甜點','咖啡','餐飲街']
+    : typeFilter==='shop'
+      ? ['市場','商店','藥妝']
+      : ['景點','展望','神社','水族館','動物園','博物館','美術館','歷史','自然','公園','溫泉','娛樂','體驗'];
+
+  const groups = [];
+  const seenCats = new Set();
+  categoryOrder.forEach(c=>{
+    const rs=rows.filter(p=>p.category===c);
+    if(rs.length){groups.push([c,rs]);seenCats.add(c);}
+  });
+  const others=rows.filter(p=>!seenCats.has(p.category));
+  if(others.length) groups.push(['其他',others]);
+
+  grid.innerHTML=groups.map(([catName,catRows])=>{
+    const cards=catRows.map((p,i)=>{
+    const rid='p'+DATA.indexOf(p);
+    let rating='';
+    const isRatedFood=['餐廳','甜點','咖啡'].includes(p.category);
+    const isFoodArea=p.category==='餐飲街' || p.tabelogStatus==='complex';
+    if(isRatedFood){
+      rating = p.tabelogRating!=null
+        ? `<div class="rate-box"><span class="rate-tabelog">Tabelog ★ ${p.tabelogRating.toFixed(2)}</span>${p.tabelogReviews?`<span class="rating-note">${p.tabelogReviews.toLocaleString()} 則口コミ</span>`:''}<span class="rating-note">查核 ${p.tabelogChecked||'2026/08/17'}</span></div>`
+        : `<div class="rate-box"><span class="rate-tabelog">Tabelog：目前無可可靠列出的單店分數</span></div>`;
+    } else if(isFoodArea){
+      rating = `<div class="rate-box"><span class="rate-tabelog">Tabelog：複合設施／無單一總分</span><span class="rating-note">${esc(p.tabelogNote||'各店分別評分')}</span></div>`;
+    } else {
+      rating = p.googleRating!=null
+        ? `<span class="rate-google" id="rate-${rid}">Google ★ ${Number(p.googleRating).toFixed(1)}${p.googleReviews?' · '+p.googleReviews.toLocaleString()+'則':''}</span>`
+        : `<span class="rate-google" id="rate-${rid}">Google：靜態快照／最新請開 Maps</span>`;
+    }
+    const meta=[];
+    if(p.travel!=null) meta.push(`🚉 約 ${p.travel} 分`);
+    if(p.transport) meta.push(p.transport);
+    if(p.otaruKm!=null) meta.push(`📍 距小樽站約 ${p.otaruKm.toFixed(1)} km`);
+    if(p.chome) meta.push(`狸小路 ${p.chome} 丁目`);
+    return `<article class="card" data-index="${DATA.indexOf(p)}" id="${rid}">
+      <div class="preview">
+        <img id="img-${rid}" src="${fallbackSvg(p)}" alt="${esc(p.cn)} 預覽圖" loading="lazy" onerror="this.src='${fallbackSvg(p)}'">
+        <div class="photo-credit" id="credit-${rid}"></div>
+        <div class="badges"><span class="badge">${esc(p.category)}</span>${p.featured?'<span class="badge featured">推薦</span>':''}</div>
+      </div>
+      <div class="body">
+        <h2 class="title">${esc(p.cn)}</h2>
+        <div class="jp">${esc(p.jp)}</div>
+        <div class="desc">${esc(p.desc)}</div>
+        <div class="meta">${meta.map(x=>'<span>'+esc(x)+'</span>').join('')}</div>
+        <div class="rating">${rating}</div>
+        <div class="actions">
+          <a target="_blank" rel="noopener" href="${mapsUrl(p)}">Google Maps</a>
+          
+          ${p.officialUrl?`<a target="_blank" rel="noopener" href="${esc(p.officialUrl)}">官方網站</a>`:''}
+          ${p.travel!=null?`<a target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&origin=${enc('札幌駅')}&destination=${enc((p.jp||p.cn)+' 北海道')}&travelmode=transit">從札幌站搭車</a>`:''}
+          ${p.otaruKm!=null?`<a target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&origin=${enc('小樽駅')}&destination=${enc((p.jp||p.cn)+' 小樽')}&travelmode=walking">從小樽站導航</a>`:''}
+        </div>
+      </div>
+    </article>`;
+    }).join('');
+    return `<h2 class="section-heading">${esc(catName)}</h2><div class="section-sub">${catRows.length} 筆</div>${cards}`;
+  }).join('');
+}
+
+function populateCats(){
+  const sel=document.querySelector('#category');
+  [...new Set(DATA.map(x=>x.category))].sort((a,b)=>a.localeCompare(b,'zh-Hant')).forEach(c=>{
+    const o=document.createElement('option');o.value=c;o.textContent=c;sel.appendChild(o);
+  });
+}
+
+
+document.querySelectorAll('.tab').forEach(b=>b.addEventListener('click',()=>{
+  document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));b.classList.add('active');
+  scope=b.dataset.scope;
+  if(scope!=='tanuki') document.querySelector('#chome').value='';
+  render();
+}));
+document.querySelectorAll('.type-tab').forEach(b=>b.addEventListener('click',()=>{
+  document.querySelectorAll('.type-tab').forEach(x=>x.classList.remove('active'));b.classList.add('active');
+  typeFilter=b.dataset.type;
+  render();
+}));
+['q','category','time','chome','sort','ratedOnly'].forEach(id=>document.querySelector('#'+id).addEventListener(id==='q'?'input':'change',render));
+
+populateCats();
+render();
+</script>
+<script src="assets/seasonal.js"></script><script>window.ERNEST_POPULARITY={};</script><script src="assets/dense-mobile.js?v=20261027"></script><script src="assets/weather.js"></script><script src="data/catalog.js"></script><script src="assets/list-view.js"></script></body>
+</html>

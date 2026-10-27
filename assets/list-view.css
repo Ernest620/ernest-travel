@@ -1,0 +1,32 @@
+/* Ernest Travel — unified Centrair-style list rows */
+:root{--elist-ink:#3E3A39;--elist-paper:#FFFCF6;--elist-line:#DDD4CC}
+body.unified-list-active{background:var(--season-paper,var(--elist-paper))}
+body.unified-list-active .season-theme-note,
+body.unified-list-active .social-mini,
+body.unified-list-active .dense-note,
+body.unified-list-active .version-note,
+body.unified-list-active .release-note,
+body.unified-list-active [data-version-summary]{display:none!important}
+.ernest-list-shell{max-width:1180px;margin:8px auto 46px;padding:0 8px}
+.ernest-list-heading{margin:4px 0 7px}.ernest-list-heading h1{font-size:20px;margin:0}
+.ernest-list-tools{position:sticky;top:48px;z-index:25;background:color-mix(in srgb,var(--season-paper,#FFFCF6) 96%,transparent);padding:6px 0 7px;border-bottom:2px solid var(--elist-ink)}
+.ernest-list-tools-row{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(100px,.65fr) minmax(100px,.65fr) minmax(96px,.5fr);gap:5px}
+.ernest-list-tools input,.ernest-list-tools select{min-width:0;width:100%;height:36px;border:2px solid var(--elist-ink);border-radius:10px;background:#fff;color:var(--elist-ink);padding:0 8px;font:800 11px/1.2 'Huninn','Noto Sans TC',system-ui,sans-serif}
+.ernest-list-count{display:flex;gap:5px;align-items:center;flex-wrap:wrap;padding:6px 1px 1px;font-size:9px;color:#6f6864}.ernest-list-count b{font-size:11px;color:var(--elist-ink)}
+.quick-poi{border:2px solid var(--elist-ink);border-radius:999px;background:var(--season-accent,#A8D3E6);font-weight:900;font-size:9px;padding:3px 7px;cursor:pointer}
+.ernest-list{display:flex;flex-direction:column;gap:5px;padding-top:6px}
+/* Same component is used by every attraction / restaurant / shop / shrine, including Centrair. */
+.ernest-item{border:2px solid var(--elist-ink);border-radius:13px;background:#fff;box-shadow:2px 2px 0 var(--season-shadow,#D8D0C8);overflow:hidden}
+.ernest-item>summary{list-style:none;display:grid;grid-template-columns:32px minmax(0,1fr) auto;gap:7px;align-items:center;min-height:48px;padding:5px 8px;cursor:pointer;background:#fff}.ernest-item>summary::-webkit-details-marker{display:none}
+.ernest-grade{width:30px;height:30px;display:grid;place-items:center;border:2px solid var(--elist-ink);border-radius:9px;font-size:10px;font-weight:1000;background:var(--season-green,#B9DAA5)}
+.ernest-grade[data-grade="S"]{background:var(--season-primary,#F2A497)}.ernest-grade[data-grade="A"]{background:var(--season-secondary,#F6D27A)}.ernest-grade[data-grade="B"]{background:var(--season-green,#B9DAA5)}.ernest-grade[data-grade="C"]{background:var(--season-accent,#A8D3E6)}
+.ernest-item-title{min-width:0}.ernest-item-name{display:block;font-size:16px;line-height:1.15;font-weight:950;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.ernest-item.food .ernest-item-name{font-size:18px}
+.ernest-item-sub{display:flex;gap:4px;align-items:center;margin-top:3px;min-width:0;color:#746d69;font-size:9px;white-space:nowrap;overflow:hidden}.ernest-item-sub .category{font-size:7.5px;font-weight:900;padding:2px 4px;border:1.5px solid var(--elist-ink);border-radius:999px;background:var(--season-soft,#FFF0EC);color:var(--elist-ink);flex:0 0 auto}.ernest-item-sub .area{overflow:hidden;text-overflow:ellipsis}
+.ernest-item-meta{max-width:105px;text-align:right;font-size:9px;font-weight:800}.ernest-item-meta b,.ernest-item-meta small{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.ernest-item-meta small{font-size:8px;color:#756f6b;margin-top:2px}
+.ernest-item-body{padding:8px 9px 9px;border-top:1px solid var(--elist-line);background:var(--season-paper,#FFFCF6);font-size:10.5px;line-height:1.55;color:#504a46}
+.ernest-item-summary{margin:0 0 7px;font-size:11px}.ernest-facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:4px;margin:5px 0 7px}.ernest-fact{border:1px solid #ddd4cc;border-radius:8px;background:#fff;padding:5px 6px;min-width:0}.ernest-fact b{display:block;font-size:8px;color:#756f6b;margin-bottom:1px}.ernest-fact span{font-size:9.5px;word-break:break-word}
+.ernest-item-actions{display:flex;gap:5px;flex-wrap:wrap;margin-top:7px}.ernest-item-actions a{display:inline-flex;align-items:center;justify-content:center;min-height:29px;border:2px solid var(--elist-ink);border-radius:8px;padding:5px 8px;background:#fff;text-decoration:none;color:var(--elist-ink);font-size:9.5px;font-weight:900}.ernest-item-actions a.detail{background:var(--season-accent,#A8D3E6)}
+.ernest-empty{padding:22px;text-align:center;color:#746d69;font-size:11px}
+/* Hide legacy grid/card layouts after the catalog renderer takes over. */
+body.unified-list-active .legacy-weather,body.unified-list-active #legacyWeather,body.unified-list-active .old-weather,body.unified-list-active .weather-old{display:none!important}
+@media(max-width:700px){.ernest-list-shell{padding:0 5px;margin-top:5px}.ernest-list-tools{top:46px}.ernest-list-tools-row{grid-template-columns:minmax(0,1fr) 92px}.ernest-list-tools-row .sort,.ernest-list-tools-row #elistArea{grid-row:2}.ernest-list-tools input,.ernest-list-tools select{height:34px;font-size:10px}.ernest-item>summary{min-height:46px;padding:4px 7px;grid-template-columns:30px minmax(0,1fr) 74px}.ernest-grade{width:28px;height:28px}.ernest-item-name{font-size:15px}.ernest-item.food .ernest-item-name{font-size:17px}.ernest-item-meta{max-width:74px;font-size:8.5px}.ernest-facts{grid-template-columns:1fr}.ernest-item-body{padding:7px 8px 8px}.ernest-item-summary{font-size:10.5px}}

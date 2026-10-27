@@ -1,0 +1,51 @@
+(()=>{
+ const month=new Date().getMonth()+1;
+ const themes={
+  1:{season:'冬',icon:'❄️',name:'雪色',paper:'#F7FBFF',surface:'#FFFFFF',primary:'#B8DCEB',secondary:'#F2D98C',accent:'#D8E8F0',green:'#C8DDBA',soft:'#EEF7FB'},
+  2:{season:'冬',icon:'🌸',name:'雪梅',paper:'#FFF9FA',surface:'#FFFFFF',primary:'#E9B9C2',secondary:'#F2D98C',accent:'#C8DDEB',green:'#C6D9B7',soft:'#FFF0F3'},
+  3:{season:'春',icon:'🌱',name:'初春',paper:'#FFFDF8',surface:'#FFFFFF',primary:'#F2B6AE',secondary:'#F5D77E',accent:'#B8DCEB',green:'#BCDDA8',soft:'#FFF2EE'},
+  4:{season:'春',icon:'🌸',name:'櫻花',paper:'#FFF9F7',surface:'#FFFFFF',primary:'#F2A497',secondary:'#F6D27A',accent:'#B9DCE8',green:'#BEDCAB',soft:'#FFF0EC'},
+  5:{season:'春',icon:'🍃',name:'新綠',paper:'#FBFDF7',surface:'#FFFFFF',primary:'#C5DDAE',secondary:'#F3D37E',accent:'#AED7E7',green:'#A9D392',soft:'#F0F8E9'},
+  6:{season:'夏',icon:'☔',name:'紫陽花',paper:'#F8FCFF',surface:'#FFFFFF',primary:'#B9C7E7',secondary:'#E8D58B',accent:'#9FD2E5',green:'#B8D7B1',soft:'#EEF6FC'},
+  7:{season:'夏',icon:'🌊',name:'青空',paper:'#F8FDFF',surface:'#FFFFFF',primary:'#9FD9EA',secondary:'#F6D674',accent:'#BFE7F2',green:'#ADD8A5',soft:'#EAF8FC'},
+  8:{season:'夏',icon:'🌻',name:'向日葵',paper:'#FFFDF5',surface:'#FFFFFF',primary:'#F3C96C',secondary:'#F6DF8A',accent:'#A9D8E8',green:'#B7D69B',soft:'#FFF7D9'},
+  9:{season:'秋',icon:'🌾',name:'初秋',paper:'#FFF9F1',surface:'#FFFFFF',primary:'#DDB07C',secondary:'#EACF77',accent:'#B1CBD6',green:'#B9C6A3',soft:'#FFF0DE'},
+ 10:{season:'秋',icon:'🍁',name:'紅葉',paper:'#FFF8EE',surface:'#FFFFFF',primary:'#E7A46F',secondary:'#F0CC71',accent:'#AFC8D4',green:'#B8C89D',soft:'#FBE9D7'},
+ 11:{season:'秋',icon:'🍂',name:'銀杏',paper:'#FFFBEF',surface:'#FFFFFF',primary:'#E5BE61',secondary:'#F2D98B',accent:'#B8CCD5',green:'#B8C39E',soft:'#FFF3CC'},
+ 12:{season:'冬',icon:'⛄',name:'初雪',paper:'#F8FBFF',surface:'#FFFFFF',primary:'#B7D7E8',secondary:'#EBD68D',accent:'#D9E7EF',green:'#C6D9BC',soft:'#EEF6FA'}
+ };
+ const t=themes[month]; const r=document.documentElement;
+ const vars={paper:t.paper,surface:t.surface,primary:t.primary,secondary:t.secondary,accent:t.accent,green:t.green,soft:t.soft};
+ for(const [k,v] of Object.entries(vars))r.style.setProperty('--season-'+k,v);
+ r.dataset.month=month;r.dataset.season=t.season;
+ function esc(s){return String(s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+ function pageKind(){const x=(document.title+' '+location.pathname).toLowerCase();if(x.includes('itinerary'))return'itinerary';if(x.includes('函館')||x.includes('hakodate'))return'hakodate';if(x.includes('洞爺')||x.includes('toya'))return'toya';if(x.includes('小樽')||x.includes('otaru'))return'otaru';if(x.includes('狸小路')||x.includes('tanuki'))return'tanuki';if(x.includes('地下')||x.includes('underground'))return'underground';if(x.includes('社群')||x.includes('social_hokkaido'))return'social';if(x.includes('centrair')||x.includes('中部國際機場'))return'centrair';if(x.includes('札幌')||x.includes('sapporo'))return'sapporo';return'overview'}
+ const kind=pageKind();
+ function motif(){if([12,1,2].includes(month))return `<g fill="none" stroke="#3E3A39" stroke-width="2"><path d="M232 16v18m-9-9h18m-15-6 12 12m0-12-12 12"/></g>`;if([3,4,5].includes(month))return `<g fill="${t.primary}" stroke="#3E3A39" stroke-width="2"><circle cx="232" cy="24" r="6"/><circle cx="224" cy="20" r="6"/><circle cx="240" cy="20" r="6"/><circle cx="228" cy="13" r="6"/><circle cx="236" cy="13" r="6"/></g>`;if([6,7,8].includes(month))return `<g fill="${t.secondary}" stroke="#3E3A39" stroke-width="2"><circle cx="232" cy="22" r="10"/><path d="M232 5v7m0 20v7m-17-17h7m20 0h7"/></g>`;return `<g fill="${t.primary}" stroke="#3E3A39" stroke-width="2"><path d="M232 9c10 8 10 18 0 29-10-11-10-21 0-29Z"/><path d="m232 18 0 23" fill="none"/></g>`}
+ function art(){const s='#3E3A39',p=t.primary,a=t.accent,y=t.secondary,g=t.green;let x='';
+  if(kind==='hakodate')x=`<path d="M15 68 62 28l38 40" fill="${g}" stroke="${s}" stroke-width="3"/><path d="M4 74h180" stroke="${s}" stroke-width="3"/><rect x="112" y="48" width="47" height="25" rx="4" fill="${p}" stroke="${s}" stroke-width="3"/><path d="M120 48v-12h30v12" fill="${a}" stroke="${s}" stroke-width="3"/><circle cx="82" cy="67" r="5" fill="${y}" stroke="${s}" stroke-width="3"/>`;
+  else if(kind==='toya')x=`<ellipse cx="84" cy="66" rx="70" ry="14" fill="${a}" stroke="${s}" stroke-width="3"/><path d="M56 58 91 18l32 40" fill="${g}" stroke="${s}" stroke-width="3"/><path d="M91 18 103 34H79Z" fill="${p}" stroke="${s}" stroke-width="3"/><path d="M128 61h38l-8 12h-22Z" fill="${y}" stroke="${s}" stroke-width="3"/>`;
+  else if(kind==='otaru')x=`<path d="M5 72h180" stroke="${s}" stroke-width="3"/><path d="M18 72V45h42v27m8 0V38h48v34" fill="${p}" stroke="${s}" stroke-width="3"/><path d="M14 45h50L39 30Z" fill="${y}" stroke="${s}" stroke-width="3"/><path d="M126 72V28m0 0 12 8m-12-8-12 8" stroke="${s}" stroke-width="3" fill="none"/><path d="M5 80h180" stroke="${a}" stroke-width="8"/>`;
+  else if(kind==='tanuki')x=`<circle cx="80" cy="50" r="31" fill="${y}" stroke="${s}" stroke-width="3"/><path d="M52 31 38 18l5 25m65-12 14-13-5 25" fill="${p}" stroke="${s}" stroke-width="3"/><circle cx="69" cy="50" r="4" fill="${s}"/><circle cx="91" cy="50" r="4" fill="${s}"/><path d="M74 62q6 6 12 0" fill="none" stroke="${s}" stroke-width="3"/><rect x="128" y="42" width="38" height="32" rx="5" fill="${a}" stroke="${s}" stroke-width="3"/><path d="M138 42q9-13 18 0" fill="none" stroke="${s}" stroke-width="3"/>`;
+  else if(kind==='underground')x=`<rect x="20" y="34" width="130" height="40" rx="12" fill="${a}" stroke="${s}" stroke-width="3"/><rect x="34" y="43" width="35" height="14" rx="3" fill="#fff" stroke="${s}" stroke-width="3"/><rect x="79" y="43" width="35" height="14" rx="3" fill="#fff" stroke="${s}" stroke-width="3"/><circle cx="50" cy="72" r="7" fill="${p}" stroke="${s}" stroke-width="3"/><circle cx="120" cy="72" r="7" fill="${p}" stroke="${s}" stroke-width="3"/><path d="M8 82h170" stroke="${s}" stroke-width="3"/>`;
+  else if(kind==='centrair')x=`<path d="M18 62h170" stroke="${s}" stroke-width="3"/><path d="M30 51 92 38l37-25 8 3-17 30 39 9c8 2 11 8 7 13l-3 3-58-12-26 18-9-2 14-20-36 4Z" fill="${a}" stroke="${s}" stroke-width="3"/><circle cx="182" cy="24" r="10" fill="${y}" stroke="${s}" stroke-width="3"/>`;
+  else if(kind==='sapporo')x=`<path d="M76 78 94 18l18 60M84 50h20m-25 15h30" fill="none" stroke="${s}" stroke-width="4"/><circle cx="94" cy="16" r="7" fill="${p}" stroke="${s}" stroke-width="3"/><rect x="126" y="44" width="42" height="34" rx="4" fill="${a}" stroke="${s}" stroke-width="3"/><circle cx="147" cy="57" r="9" fill="#fff" stroke="${s}" stroke-width="3"/><path d="M147 57v-6m0 6 5 3" stroke="${s}" stroke-width="2"/>`;
+  else x=`<path d="M16 68 50 36l23 21 30-36 39 47" fill="${g}" stroke="${s}" stroke-width="3"/><path d="M8 76h170" stroke="${s}" stroke-width="3"/><path d="M125 57h46l-7 16h-32Z" fill="${p}" stroke="${s}" stroke-width="3"/><path d="M144 57V37" stroke="${s}" stroke-width="3"/>`;
+  return `<svg viewBox="0 0 260 90" role="img" aria-label="季節插圖"><g class="season-sway">${x}</g>${motif()}</svg>`
+ }
+ function nav(){if(document.querySelector('.season-nav'))return;const n=document.createElement('nav');n.className='season-nav';n.setAttribute('aria-label','網站主要選單');n.innerHTML=`<a href="index.html">🏠 首頁</a><a href="itinerary_2027.html">🗓️ 行程</a><a href="sapporo_2h.html">札幌</a><a href="otaru_5km.html">小樽</a><a href="hakodate_1h.html">函館</a><a href="lake_toya.html">洞爺湖</a><a href="centrair_4h.html">✈️ 中部機場</a><a href="must_hokkaido.html">🏆 大家都推</a><a href="social_hokkaido.html">🔥 社群情報</a><span class="season-current">${t.icon} ${month}月・${t.season}季 ${t.name}</span><span class="season-mini-art season-float">${art()}</span>`;document.body.prepend(n)}
+ function artPlace(){const target=document.querySelector('.hero, header, .topbar');if(!target||target.querySelector('.season-page-art'))return;const d=document.createElement('div');d.className='season-page-art season-float';d.innerHTML=art();target.appendChild(d)}
+ function note(){if(document.querySelector('.season-theme-note'))return;const main=document.querySelector('main,.main,.grid');if(!main)return;const d=document.createElement('div');d.className='season-theme-note';d.innerHTML=`<div>${t.icon} 本站會依裝置目前月份自動換季：現在是 <b>${month} 月・${t.season}季「${t.name}」</b>。12–2月冬、3–5月春、6–8月夏、9–11月秋；每個月另有不同色票。</div>`;main.parentNode.insertBefore(d,main)}
+
+ const socialHighlights={
+  sapporo:['🏆 必吃：湯咖哩、成吉思汗、味噌拉麵、北海道霜淇淋','🛍️ 必逛：狸小路晚間／雪天採買；百貨地下食品區也很實用','⚠️ 根室花まる等熱門店值得吃，但排隊超過60分鐘就換備選','🏯 必看：北海道神宮＋圓山，冬季比把白天耗在純商場更值得'],
+  otaru:['🏆 必去：堺町通＋音樂盒堂＋北一硝子；預留至少3–4小時','🌆 必看：小樽運河日落前後；30–60分鐘即可，不必整天押運河','🍣 必吃：小樽海鮮／壽司，但不等於非三角市場不可','⚠️ 三角市場先比價；天狗山冬季依天候可前移到早上'],
+  hakodate:['🏆 必看：函館山夜景、五稜郭塔；夜景建議日落前上山','🚶 必走：金森紅磚倉庫→元町→八幡坂→函館山','🍣 必吃：朝市海鮮早餐＋函館鹽拉麵；活烏賊看當日漁獲','❄️ 冬季函館山道路封閉，主要靠纜車；天候是最大變數'],
+  toya:['🏆 必住：湖景溫泉飯店一晚，比硬塞很多景點更有共識','🍨 必吃：Lake Hill Farm Gelato；有車可和SAIRO一起排','🚢 必玩：冬季遊覽船仍營運，但不能登中島','⚠️ 有珠山1–2月可能檢修；外輪山步道11–4月關閉'],
+  itinerary:['🐧 冬季S級：旭山企鵝散步；選團先看動物園停留是否≥2小時','💧 美瑛冬季：白鬚瀑布優先，青池白天可降級為順路選配','🧭 每天分「必去／有空再去」，不要把所有社群熱門點都塞成必達','🛍️ 最後採買集中札幌狸小路＋新千歲機場國內線更省時間']
+ };
+
+ function socialMini(){if(kind==='social'||document.querySelector('.social-mini')||!socialHighlights[kind])return;const target=document.querySelector('.season-theme-note')||document.querySelector('main,.main,.grid');if(!target)return;const d=document.createElement('div');d.className='social-mini';d.innerHTML='<b>🔥 近期社群摘要</b><ul>'+socialHighlights[kind].map(x=>'<li>'+esc(x)+'</li>').join('')+'</ul><a href="must_hokkaido.html">查看『大家都推』共識排名 →</a>　<a href="social_hokkaido.html">單篇社群情報 →</a>';target.parentNode.insertBefore(d,target.nextSibling)}
+
+ document.addEventListener('DOMContentLoaded',()=>{document.body.dataset.month=month;document.body.dataset.season=t.season;nav();artPlace();const homeArt=document.getElementById('homeArt');if(homeArt)homeArt.innerHTML=art();/* top seasonal/version summary intentionally hidden */ socialMini();document.body.classList.add('season-pop')});
+})();

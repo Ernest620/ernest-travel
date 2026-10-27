@@ -28,9 +28,11 @@ def parse(platform,label,url):
     try:root=ET.fromstring(data)
     except Exception:return []
     out=[]
+    # RSS
     for i in root.findall('.//item')[:15]:
         title=text(i,'title'); link=text(i,'link'); pub=text(i,'pubDate')
         if title and link:out.append({'platform':platform,'query':label,'title':title,'url':link,'published':pub,'area':''})
+    # Atom
     ns={'a':'http://www.w3.org/2005/Atom'}
     for e in root.findall('.//a:entry',ns)[:15]:
         title=(e.findtext('a:title',default='',namespaces=ns) or '').strip(); l=e.find('a:link',ns); link=l.get('href','') if l is not None else ''; pub=(e.findtext('a:updated',default='',namespaces=ns) or '')
@@ -38,7 +40,6 @@ def parse(platform,label,url):
     return out
 
 def main():
-    OUT.parent.mkdir(parents=True,exist_ok=True)
     seen=set(); items=[]
     for platform,label,url in QUERIES:
         for x in parse(platform,label,url):

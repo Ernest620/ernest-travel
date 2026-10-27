@@ -1,5 +1,61 @@
 {
-  "updated_at": "",
-  "mode": "daily-public-signal-monitor",
-  "items": []
+  "updated_at": "2026-10-27T18:45+08:00",
+  "mode": "manual-public-signal-refresh",
+  "note": "2026-10-27 立即更新：公開可讀來源重新檢索。平台登入牆或索引限制仍會保留來源狀態，不宣稱完整抓取。",
+  "items": [
+    {
+      "platform": "Dcard",
+      "query": "2026 北海道冬季自由行",
+      "title": "北海道⇢東北⇢東京 10天9夜：大風雪造成 JR 大範圍停駛，冬季大眾交通要留備案",
+      "url": "https://www.dcard.tw/f/travel/p/260781290",
+      "published": "2026-01-31",
+      "area": "北海道・函館",
+      "summary": "旅客遇大風雪與JR停駛；洞爺→函館誤點23分鐘。對1月行程的直接用途是每天都留交通緩衝與替代方案。"
+    },
+    {
+      "platform": "Dcard",
+      "query": "2026 北海道六天五夜",
+      "title": "冬季小樽＋諏訪神社：雪景、御朱印與御守成為實際行程亮點",
+      "url": "https://www.dcard.tw/f/travel/p/261118735",
+      "published": "2026",
+      "area": "札幌・小樽",
+      "summary": "一月初雪景、小樽與神社行程體驗正面；諏訪神社御朱印、御守與詩籤值得列入札幌神社類。"
+    },
+    {
+      "platform": "Dcard",
+      "query": "北海道不自駕八天七夜",
+      "title": "六花亭札幌本店、AEON桑園、諏訪神社、T38 被列為實際高滿意度點",
+      "url": "https://www.dcard.tw/f/travel/p/261763346",
+      "published": "2026",
+      "area": "札幌",
+      "summary": "六花亭本店限定甜點、AEON桑園補貨、諏訪神社雪之妖精御守、T38夜景都有明確實旅回饋。"
+    },
+    {
+      "platform": "Dcard",
+      "query": "北海道自由行 1月",
+      "title": "1月1日出發的冬季大眾交通實例：函館2天、洞爺1天、札幌5天可行",
+      "url": "https://www.dcard.tw/f/travel/p/260689460",
+      "published": "2026-01-17",
+      "area": "函館・洞爺湖・札幌",
+      "summary": "全程大眾交通完成；函館山遇纜車維修改走雪地登山、洞爺湖與有珠山冬景評價高，提醒營運狀態要當天確認。"
+    },
+    {
+      "platform": "PTT",
+      "query": "札幌 近期機場實旅",
+      "title": "新千歲早晨入境實測：8點前後名店已開始排隊，機場名店不一定值得特地排",
+      "url": "https://www.ptt.cc/bbs/Japan_Travel/M.1789336159.A.6A9.html",
+      "published": "2026-09-14",
+      "area": "新千歲・札幌",
+      "summary": "早班抵達入境快速，但國內線名店很早就有人排；留言也提醒很多名店在市區平日更容易吃。"
+    },
+    {
+      "platform": "Reddit",
+      "query": "Hokkaido itinerary 2026",
+      "title": "函館夜景應依天候彈性前移，不要把函館山鎖死在某一天",
+      "url": "https://www.reddit.com/r/JapanTravel/comments/1vsbl8w/hokkaido_trip_early_october_2026_w_proposed/",
+      "published": "2026-08-19",
+      "area": "函館",
+      "summary": "社群回覆明確提醒函館常受霧影響；遇到晴朗夜晚就應把函館山提前，這個原則冬季也適用。"
+    }
+  ]
 }

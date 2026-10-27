@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Huninn&display=swap');
+:root{
+ --season-paper:#FFFCF6;--season-surface:#FFFFFF;--season-ink:#3E3A39;
+ --season-primary:#E7A46F;--season-secondary:#F3D788;--season-accent:#AFC7D4;--season-green:#B9CDA7;
+ --season-soft:#FFF4E5;--season-line:#3E3A39;--season-shadow:rgba(62,58,57,.14);--season-nav-h:58px;
+}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--season-nav-h) + 64px)}
+body{background:var(--season-paper)!important;color:var(--season-ink)!important;font-family:'Huninn','Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif!important;letter-spacing:.01em}
+*{box-sizing:border-box;background-image:none!important}button,input,select,textarea{font-family:inherit!important}
+.season-nav{position:sticky;top:0;z-index:9999;height:var(--season-nav-h);display:flex;align-items:center;gap:8px;padding:7px 10px;border-bottom:3px solid var(--season-ink);background:var(--season-paper);overflow-x:auto;white-space:nowrap;box-shadow:0 4px 0 rgba(62,58,57,.05)}
+.season-nav a,.season-nav button{display:inline-flex;align-items:center;justify-content:center;min-height:38px;padding:7px 11px;border:2px solid var(--season-ink);border-radius:999px;background:var(--season-surface);color:var(--season-ink)!important;text-decoration:none;font-weight:900;font-size:12px;box-shadow:2px 2px 0 var(--season-ink);cursor:pointer}
+.season-nav a:hover,.season-nav button:hover{transform:translateY(-1px)}
+.season-nav .season-current{background:var(--season-secondary)}
+.season-mini-art{margin-left:auto;display:flex;align-items:center;min-width:90px}.season-mini-art svg{height:40px;width:100px;display:block}
+.season-page-art{position:absolute;right:16px;bottom:8px;width:min(300px,34vw);pointer-events:none;z-index:1;opacity:.98}.season-page-art svg{width:100%;height:auto;display:block;overflow:visible}
+header,.hero,.topbar{position:relative!important;background:var(--season-primary)!important;background-image:none!important;color:var(--season-ink)!important;border-bottom:3px solid var(--season-ink)!important;box-shadow:none!important}
+header .wrap,.hero .wrap,.topbar-inner{position:relative;z-index:2}.topbar{top:var(--season-nav-h)!important}.sticky{top:var(--season-nav-h)!important}
+.topbar,.controls,.sticky{backdrop-filter:none!important}
+.card,.infoCard,.routebox,.box,.day,.sidebar,.modalbox,.info-card,.shrineCard,.flight-card,.storybook-home,.library-panel,.sourcebox,.notice,.meta,.task,.nearItem,.guide-chip,.season-card{border:3px solid var(--season-ink)!important;border-radius:24px!important;box-shadow:4px 4px 0 var(--season-shadow)!important;background-color:var(--season-surface)!important;background-image:none!important}
+.card:hover,.guide-chip:hover,.nearItem:hover{transform:translateY(-2px);box-shadow:6px 6px 0 var(--season-shadow)!important}
+.btn,.tab,.chip,.pill,.badge,.control,.select,.search,.favbtn,.smartselect,.smartbtn,.apibtn,.mapbtn,.infobtn,.placebtn,.daychip,.modebtn,.homebtn{border:2px solid var(--season-ink)!important;border-radius:999px!important;box-shadow:2px 2px 0 var(--season-ink)!important;background:var(--season-surface)!important;color:var(--season-ink)!important}
+.btn.primary,.tab.active,.chip.active,.modebtn.active,.daychip.active,.smartbtn.primary,.favbtn.on{background:var(--season-secondary)!important;color:var(--season-ink)!important;border-color:var(--season-ink)!important}
+.btn.blue,.btn.green,.mapbtn.transit{background:var(--season-accent)!important;color:var(--season-ink)!important}.mapbtn.walk{background:var(--season-green)!important;color:var(--season-ink)!important}.mapbtn.drive{background:var(--season-secondary)!important;color:var(--season-ink)!important}
+.ratingbar .rate,.tag,.tier,.twoprice,.walk,.bless,.scoredate{border:2px solid var(--season-ink)!important;box-shadow:none!important}.rate.tbl,.tb{color:#8B4F3B!important}.rate.ggl,.gg{color:#6A5A21!important}
+.summary,.history,.menu,.decision,.transport,.nextbox,.day-guide,.previewmenu,.sourcebox,.notice{background:var(--season-soft)!important;background-image:none!important;color:var(--season-ink)!important}
+.nextbox{border:3px solid var(--season-ink)!important}.nextbox .label{color:var(--season-ink)!important}.nextbox .now{color:var(--season-ink)!important}
+.dayhero,.info-head,.modalhead,.shrineHead{background:var(--season-accent)!important;background-image:none!important;color:var(--season-ink)!important;border-bottom:3px solid var(--season-ink)!important}
+.dayhero:before{display:none!important}.dayhead{color:var(--season-ink)!important}.daydate{background:var(--season-secondary)!important;color:var(--season-ink)!important;border:2px solid var(--season-ink)!important}.daycity{color:var(--season-ink)!important;opacity:.8}
+.storybook-home{background:var(--season-paper)!important}.eyebrow,.section-kicker{background:var(--season-green)!important}.countdown-card{background:var(--season-secondary)!important}.flight-card.coral{background:color-mix(in srgb,var(--season-primary) 25%,white)!important}.flight-card.blue{background:color-mix(in srgb,var(--season-accent) 28%,white)!important}.flight-card.yellow{background:color-mix(in srgb,var(--season-secondary) 35%,white)!important}
+.pic,.storevisual,.modalhero{border:3px solid var(--season-ink)!important;border-radius:18px!important}.pic{background:var(--season-soft)!important}
+a{color:inherit}.actions a,.modalactions a{border:2px solid var(--season-ink)!important;border-radius:999px!important;background:var(--season-surface)!important;color:var(--season-ink)!important;box-shadow:2px 2px 0 var(--season-ink)!important}
+input,select,textarea{background:var(--season-surface)!important;color:var(--season-ink)!important;border-color:var(--season-ink)!important}
+.season-theme-note{max-width:1180px;margin:10px auto;padding:0 12px}.season-theme-note>div{border:3px solid var(--season-ink);border-radius:20px;background:var(--season-soft);padding:10px 12px;font-size:12px;font-weight:800;box-shadow:3px 3px 0 var(--season-shadow)}
+.season-float{animation:seasonFloat 4.5s ease-in-out infinite}.season-sway{transform-origin:center bottom;animation:seasonSway 5s ease-in-out infinite}.season-pop{animation:seasonPop .45s cubic-bezier(.2,1.6,.4,1)}
+@keyframes seasonFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}@keyframes seasonSway{0%,100%{transform:rotate(-1.5deg)}50%{transform:rotate(1.5deg)}}@keyframes seasonPop{0%{transform:scale(.96);opacity:.5}70%{transform:scale(1.025)}100%{transform:scale(1);opacity:1}}
+@media(max-width:800px){:root{--season-nav-h:56px}.season-page-art{width:130px;right:7px;bottom:5px;opacity:.86}header h1,.hero h1{max-width:70%}.season-nav{padding:6px 8px}.season-nav a,.season-nav button{font-size:11px;padding:6px 9px}.season-mini-art{display:none}.card,.infoCard,.routebox,.box,.day,.sidebar,.modalbox,.info-card,.shrineCard,.flight-card,.storybook-home{border-radius:20px!important}.sticky{top:var(--season-nav-h)!important}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}body.reduce-motion *,body.reduce-motion *::before,body.reduce-motion *::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+
+.social-mini{max-width:1180px;margin:10px auto 14px;padding:12px 14px;border:3px solid var(--season-ink);border-radius:18px;background:var(--season-soft);box-shadow:4px 4px 0 var(--season-shadow);font-size:12.5px;line-height:1.65}.social-mini ul{margin:6px 0;padding-left:20px}.social-mini a{display:inline-block;color:inherit;font-weight:900;text-decoration:none;border-bottom:2px solid var(--season-ink)}

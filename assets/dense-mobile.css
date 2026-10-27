@@ -1,0 +1,80 @@
+
+/* Ernest Travel — mobile dense browse 2026-10-27 */
+:root{--dense-line:#3e3a39;--dense-bg:#fffcf6}
+#grid,.grid,.shrineGrid{gap:8px!important}
+.card{border-radius:13px!important;box-shadow:none!important}
+.card .body{padding:9px!important;gap:5px!important}
+.card .pic{height:118px!important}
+.cardmedia{height:118px!important;min-height:0!important}
+.name,.card h3{font-size:18px!important;line-height:1.16!important;letter-spacing:.01em!important}
+.card.is-food .name,.card.is-food h3{font-size:20px!important}
+.badge,.tag,.previewtype,.jp,.loc,.parent,.checked{font-size:9.5px!important;line-height:1.25!important}
+.badge,.tag,.chip{padding:3px 6px!important}
+.desc,.summary,.menu,.historyMini{font-size:11.5px!important;line-height:1.35!important}
+.card .desc,.card .summary{display:-webkit-box!important;-webkit-box-orient:vertical!important;-webkit-line-clamp:2!important;overflow:hidden!important}
+.card .chips,.card .tags,.ratingbar,.rating{gap:4px!important;margin:3px 0!important}
+.card details{margin-top:2px!important}
+.card details>summary{font-size:10.5px!important;padding:5px 6px!important;cursor:pointer}
+.card .actions{gap:4px!important;margin-top:4px!important}
+.card .actions a,.card .btn{padding:6px 7px!important;font-size:10.5px!important;border-radius:8px!important}
+.hot-tier{display:inline-flex;align-items:center;gap:2px;font-size:9px;font-weight:900;padding:3px 6px;border:2px solid #3e3a39;border-radius:999px;background:#f6d27a;color:#3e3a39;white-space:nowrap}
+.hot-tier[data-grade="S"]{background:#f2a497}.hot-tier[data-grade="A"]{background:#f6d27a}.hot-tier[data-grade="B"]{background:#b9daa5}.hot-tier[data-grade="C"]{background:#a8d3e6}
+.shrineCard{border-radius:14px!important;overflow:hidden!important;margin:0!important}
+.shrineHead{padding:10px!important}.shrineHead h3{font-size:17px!important;margin:0 0 3px!important}.shrineHead .jp{font-size:9.5px!important}
+.shrineDetails>summary{list-style:none;cursor:pointer;padding:7px 10px;font-weight:900;font-size:11px;border-top:1px dashed #bbb;background:#fffaf0}
+.shrineDetails>summary::-webkit-details-marker{display:none}.shrineDetails>summary:after{content:' ＋'} .shrineDetails[open]>summary:after{content:' −'}
+.shrineBody{padding:8px!important}.shrineSec{padding:8px!important}.shrineSec h4{font-size:12px!important;margin:0 0 5px!important}.shrineSec,.shrineSec li,.shrineSec p{font-size:10.5px!important;line-height:1.4!important}
+.dense-note{max-width:1280px;margin:6px auto;padding:7px 10px;font-size:10.5px;border:2px solid #3e3a39;border-radius:12px;background:#fffaf0}
+@media(max-width:700px){
+  .grid,#grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:6px!important;padding:7px!important}
+  .shrineGrid{grid-template-columns:1fr!important;padding:7px!important;gap:6px!important}
+  .card{border-radius:11px!important;min-height:0!important}
+  .card .pic,.cardmedia{height:80px!important}
+  .card .body{padding:6px!important;gap:3px!important}
+  .name,.card h3{font-size:15.5px!important;line-height:1.14!important}
+  .card.is-food .name,.card.is-food h3{font-size:17.5px!important}
+  .jp,.loc,.parent{font-size:8.5px!important;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .badge,.tag,.previewtype,.chip,.checked{font-size:8px!important;padding:2px 4px!important}
+  .desc,.summary,.menu,.historyMini{font-size:9.8px!important;line-height:1.3!important}
+  .card .desc,.card .summary{-webkit-line-clamp:2!important}
+  .card .rating,.card .ratingbar{font-size:9px!important;line-height:1.2!important}
+  .card .actions a,.card .btn{font-size:9px!important;padding:5px!important}
+  .card details>summary{font-size:9px!important;padding:4px 5px!important}
+  .ico{width:28px!important;height:28px!important;font-size:15px!important;border-radius:8px!important}
+  .star{font-size:17px!important}
+  .tags{margin:4px 0!important}.cardtop{gap:5px!important}
+  .controls{gap:5px!important;padding:7px!important}.control{font-size:11px!important;padding:7px 8px!important}
+  .tabs{gap:4px!important}.tab{font-size:10px!important;padding:6px 8px!important}
+  header h1{font-size:22px!important}.hero h1{font-size:24px!important}
+}
+@media(max-width:360px){.grid,#grid{grid-template-columns:1fr 1fr!important}.card .pic,.cardmedia{height:72px!important}.name,.card h3{font-size:14.5px!important}.card.is-food .name,.card.is-food h3{font-size:16.5px!important}}
+
+
+/* final phone-first density */
+@media(max-width:700px){
+  .main,.wrap,main{padding-left:8px!important;padding-right:8px!important}
+  #grid.grid,.grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:7px!important}
+  .card .pic,.cardmedia{height:74px!important}
+  .card .body{padding:7px!important}
+  .name,.card h3{font-size:15.5px!important;line-height:1.12!important}
+  .card.is-food .name,.card.is-food h3{font-size:18px!important;line-height:1.08!important;font-weight:950!important}
+  .badge,.tag,.previewtype,.jp,.loc,.parent,.checked{font-size:8px!important}
+  .badge,.tag,.chip{padding:2px 4px!important;border-width:1.5px!important}
+  .desc,.summary,.menu,.historyMini{font-size:10.5px!important;line-height:1.28!important}
+  .card .desc,.card .summary{-webkit-line-clamp:1!important}
+  .rating,.ratingbar{font-size:10px!important}
+  .card details>summary{font-size:10px!important;padding:4px 5px!important}
+  .card .actions a,.card .btn{font-size:9.5px!important;padding:5px 6px!important}
+  .infoCard{padding:9px!important;margin-bottom:8px!important}
+  .infoCard h2{font-size:17px!important;margin-bottom:4px!important}
+  .infoCard .lead,.infoCard .history{font-size:10.5px!important;line-height:1.35!important}
+  .shrineGrid{grid-template-columns:1fr!important;gap:7px!important}
+  .shrineHead{padding:8px 9px!important}
+  .shrineHead h3{font-size:17px!important;margin:0!important}
+  .shrineBody{padding:7px 9px!important}
+  .shrineBody>details>summary{font-size:10.5px!important}
+}
+
+.dense-legend{font-size:10.5px;line-height:1.35;padding:7px 9px;margin:6px 0;border:2px solid #3e3a39;border-radius:10px;background:#fffcf6}
+
+.social-daily-actions{display:flex;gap:4px;align-items:center}.social-daily-actions button,.social-daily-actions a{border:1.5px solid #3E3A39;border-radius:8px;background:#fff;padding:4px 6px;color:#3E3A39;text-decoration:none;font-size:8px;font-weight:900}.social-daily-actions a{background:#F6D27A}@media(max-width:700px){.social-daily-head{flex-wrap:wrap}.social-daily-actions{width:100%;justify-content:flex-end}}
