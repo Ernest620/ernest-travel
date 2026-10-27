@@ -1,0 +1,20 @@
+name: Staging full-site QA
+on:
+  push:
+    branches: [staging-fullsite-20261027]
+permissions:
+  contents: read
+jobs:
+  qa:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: node --check assets/mobile-refresh.js
+      - run: python -m py_compile scripts/update_social.py
+      - run: python scripts/qa_site.py
