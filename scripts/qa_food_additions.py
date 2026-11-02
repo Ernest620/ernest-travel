@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import json
 from pathlib import Path
 
 
@@ -13,6 +14,12 @@ def require_all(filename: str, values: list[str]) -> None:
     text = page(filename)
     missing = [value for value in values if value not in text]
     assert not missing, f"{filename} missing: {', '.join(missing)}"
+
+
+def embedded_json(filename: str, marker: str):
+    text = page(filename)
+    start = text.index(marker) + len(marker)
+    return json.JSONDecoder().raw_decode(text[start:].lstrip())[0]
 
 
 def main() -> None:
@@ -87,7 +94,27 @@ def main() -> None:
     missing_overview = [name for name in overview_names if name not in overview]
     assert not missing_overview, "travel_overview.html missing: " + ", ".join(missing_overview)
 
-    print("FOOD ADDITIONS QA PASS: 15 venues searchable with menu details and overview sync")
+    otaru = embedded_json("otaru_5km.html", "const DATA=")
+    letao_url = "https://tabelog.com/hokkaido/A0106/A010601/1000304/"
+    assert sum(item.get("tabelogUrl") == letao_url for item in otaru) == 1, (
+        "LeTAO 本店 must render exactly once"
+    )
+
+    toya = embedded_json("lake_toya.html", "const DB=")
+    the_toya = next(item for item in toya["snacks"] if item["jp"] == "THE TOYA")
+    assert "投稿者回報只能刷卡" in the_toya.get("note", ""), (
+        "THE TOYA payment caveat must use the rendered/searchable note field"
+    )
+
+    overview_data = embedded_json("travel_overview.html", "const DATA=")
+    categories = {item["jp"]: item["category"] for item in overview_data}
+    assert categories["Susukino Creperiz（すすきの クレープリ）"] == "甜點"
+    assert categories["ESPRESSO D WORKS ココノススキノ店"] == "咖啡"
+    assert "p.subtype,p.recommendedMenu" in overview.replace(" ", ""), (
+        "overview search must include subtype and recommendedMenu"
+    )
+
+    print("FOOD ADDITIONS QA PASS: 15 venues render once with menu details, categories, searchable notes, and overview sync")
 
 
 if __name__ == "__main__":
