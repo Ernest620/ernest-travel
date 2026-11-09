@@ -1,7 +1,15 @@
 {
-  "updated_at": "2026-11-08T09:27+08:00",
+  "updated_at": "2026-11-09T09:45+08:00",
   "mode": "daily-public-signal-monitor",
   "items": [
+    {
+      "platform": "Reddit",
+      "query": "北海道旅行",
+      "title": "How to see Kanazawa, Takayama, Kusatsu Onsen and Nikko in one trip - full guide for Japan Alps and the Romantic road",
+      "url": "https://www.reddit.com/r/JapanTravelTips/comments/1xrem7h/how_to_see_kanazawa_takayama_kusatsu_onsen_and/",
+      "published": "2026-11-09T01:17:27+00:00",
+      "area": ""
+    },
     {
       "platform": "Reddit",
       "query": "北海道旅行",
@@ -83,38 +91,6 @@
       "area": ""
     },
     {
-      "platform": "Reddit",
-      "query": "北海道旅行",
-      "title": "How to visit both Yogibo Versailles Resort Farm and Big Red Farm Meiwa",
-      "url": "https://www.reddit.com/r/JapanTravelTips/comments/1xkyc7f/how_to_visit_both_yogibo_versailles_resort_farm/",
-      "published": "2026-11-01T08:59:09+00:00",
-      "area": ""
-    },
-    {
-      "platform": "Reddit",
-      "query": "北海道旅行",
-      "title": "Solo friendly onsen suggestions",
-      "url": "https://www.reddit.com/r/JapanTravelTips/comments/1xkvety/solo_friendly_onsen_suggestions/",
-      "published": "2026-11-01T05:51:29+00:00",
-      "area": ""
-    },
-    {
-      "platform": "Reddit",
-      "query": "北海道旅行",
-      "title": "Do you have a JR Pass, IC Card (Suica/Pasmo/etc.), or train travel question? Start here! (Monthly Thread - November 01, 2026)",
-      "url": "https://www.reddit.com/r/JapanTravelTips/comments/1xktn55/do_you_have_a_jr_pass_ic_card_suicapasmoetc_or/",
-      "published": "2026-11-01T04:05:15+00:00",
-      "area": ""
-    },
-    {
-      "platform": "Reddit",
-      "query": "北海道旅行",
-      "title": "Help/Opinions on Hokkaido Travel Dates",
-      "url": "https://www.reddit.com/r/JapanTravelTips/comments/1xktfd9/helpopinions_on_hokkaido_travel_dates/",
-      "published": "2026-11-01T03:53:31+00:00",
-      "area": ""
-    },
-    {
       "platform": "SearchIndex",
       "query": "Threads 北海道",
       "title": "もち🍥トレンド予報ちゃん (@mochi___media) - Threads",
@@ -189,17 +165,25 @@
     {
       "platform": "SearchIndex",
       "query": "Threads 北海道",
-      "title": "jack (@sabu0421) - Threads",
-      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5ueFFxeTRIVWU1SExfVllwVE1nYXV4RGV4WmMzakJ4YTNKRXh1WDdRUnQ2b2xlSHVqbVBnMlUzNGp2VGhLang5Q2VBUzRObDJaSXZVc0tNUTVLbnNvUmY4?oc=5",
-      "published": "Sat, 17 Aug 2024 07:00:00 GMT",
+      "title": "樋田 繁文、cafe津別珈琲のマスター (@coffeelover_woody) - Threads",
+      "url": "https://news.google.com/rss/articles/CBMijAdBVV95cUxORTFmNGNWbWNwOHAzMEVGWV9WRFMwYmJvNzlabGRSWDJ3dy1GOVBubmpuQ0tqc1o3MUxpYmtfcmVhcDRTUEhoT19MY0l1a2RtZm9VSkJRbmttWUE2RHRuMEtEckl4Vlg4U0JRVzlVSTAwVE5VTnFrZm5aVkVGZWxTaTlvNzZ0bXZPeGVod0xwZXNNaHZTNTBTM0twT1ZTb0hMR1BRRi1LbXpScjVnNWJuU20tcERfSjI1YkhWWURIbGdfZlllTzB0QTdIS01UQWZRdl9kSXRmOENleXVTUUhIcHRKMUlwY056dDV6dGZNX2ZESVJOR2NBajZpV0ZjQ2dSVnNOT3BVVGctUGV3QTdaZG5sOWtTZWVUVHNwTUhzMVNCRWVLaGZhWDladHkyVGpid2FSNFRhNU14THVUQzJOX21IYWlvR0Q4TEROc1FBamp3Yk44Q01NUXZLdEpnSThzNlNjcXpVVHZaUk9URVphcm40OFZaNjQ5SjZqb0NrYVFGSkVFSXM0VjlFVVRMSTlPN2lZQXRxNG1jZUlOUDFVUHhxTHJ2X2ZnM3VRVUJ5eVpXQkVVRkdmTm5jRmN3Y2VON1FZcklzdkRuUWFiZ3FoeV8zTVNHMTNydUptQkhueUpzTjdScjJXOUdXQTNncEdlQ0tkMm0xS2RlUkVrTEFRZGZaTFNYZTIyZy1XTDhTUW1pZ3RHWXJVNV92Vm9DNklucU5PMWRsbG4tU2I5U2xjLWtNbnNMMVVrTlBIUFB1QjVseW9LWGVwdzEyTmZZSks2WmhBVlZqYUpJRmxsaTVnLVU5M0VndUNvUzdackdoN1pVWlduZnZFNUkwUnJZd25LVDA3TjVUTGd5THkxRFpsVDBXeTVyVWlPUUhoTmdVQ0JGQzJDalJ2T3VBVUlfZ1VuSm5HWlIyZl9SQ0U2NEQtSi10U1NiWFo1Q3dUaVpDOEhXNGVwbnZGYkVpSlVpbEpRdTRCdURaRlNCSkU3dVRWMVFNZjB2X1NmMG1pazI0c2pHUWFHRndTR0FYSmp0N2VYUG9hdDBienFlTkpsSVI2MzQtZlJaTHBNa3N4OVFLaW1kb2FIeEJucUdXVDlPNWN5ckNtNXVoUTFYSGpKRURRM09HUlJ2cU91WjdjOWczZ2ZFa005VHRGbEdxbGRUeEpSOHdHT1pXZGp0Vlh3LTF5S0pzZHBYbVNTRXg3aA?oc=5",
+      "published": "Mon, 07 Jul 2025 07:00:00 GMT",
       "area": ""
     },
     {
       "platform": "SearchIndex",
       "query": "Threads 北海道",
-      "title": "北海道海鮮工房【伏古にある海鮮丼＆海鮮居酒屋】 (@hokkaido_kaisen_kobo) - Threads",
-      "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9FbWhXZE9EN1NaYTZHRE5lWjh1d0tKV1hwajNvTGlsSG80UUNKdUw3TzMxeFcteWRzUDdId3BiRTRaXzdFYUI1SUFPZWEwZE1zcHhhZWRfZ045QjhPOFJlYnRIUjBudTlXdWJ0dWJKTQ?oc=5",
-      "published": "Tue, 15 Oct 2024 07:00:00 GMT",
+      "title": "【公式】trip link✈ 北海道札幌市旅行会社|観光ガイド (@hokkaido_kanko) • Threads, Say more - Threads",
+      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE45eXF3QjNTUDR6bURtVzh5U3ZSSXlhYWRnVDZqTy1WTkdSMU56bEktNm8xWTNzVU5KYUlLWEZ1YmpnZEN0ejBnOVRLN25RcE1E?oc=5",
+      "published": "Wed, 30 Apr 2025 01:43:09 GMT",
+      "area": ""
+    },
+    {
+      "platform": "SearchIndex",
+      "query": "Threads 北海道",
+      "title": "jack (@sabu0421) - Threads",
+      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5ueFFxeTRIVWU1SExfVllwVE1nYXV4RGV4WmMzakJ4YTNKRXh1WDdRUnQ2b2xlSHVqbVBnMlUzNGp2VGhLang5Q2VBUzRObDJaSXZVc0tNUTVLbnNvUmY4?oc=5",
+      "published": "Sat, 17 Aug 2024 07:00:00 GMT",
       "area": ""
     },
     {
@@ -224,14 +208,6 @@
       "title": "ひろせ まさと\\世界自然遺産知床のHotel staff / (@shiretoko_shittoko.masato) - Threads",
       "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE93V0EtbEpwaFV4TFRpSWNzTXg1cmJlWXZ5TjlxVmNGcXd4MWpleDBGVjVoWE5DVEZKNnZxN0ZOTnV5S2NJZWJrMEpNd2F2X255djVaZVdZU1dOQ1pUd0w2eDdUeHRXX0ZwTXdzWW1FdXNYaWpSMGc?oc=5",
       "published": "Thu, 08 Aug 2024 07:00:00 GMT",
-      "area": ""
-    },
-    {
-      "platform": "SearchIndex",
-      "query": "Threads 北海道",
-      "title": "川崎純/宇都宮【K.Kreis】店長 /レイヤー/髪質改善ストレート/似合わせ (@k.kreis_jun) - Threads",
-      "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE82eHdlb2JtTDczd2xaQmVwSUQza0ctWDQ4RG8yYjBkdGFwNXZ3TmtWVHZZMmpwc3JVOEoxeHF5Snl3ZUpxaGMzWE00RUZjT29UejNsLVdzZGJYM3M1SlVEMVlGMA?oc=5",
-      "published": "Thu, 21 Nov 2024 08:00:00 GMT",
       "area": ""
     },
     {
@@ -309,17 +285,17 @@
     {
       "platform": "SearchIndex",
       "query": "Instagram 北海道",
-      "title": "【3年 修学旅行】 6月6日から9日まで3泊4日で北海道へ修学旅行へ行きました🛩 衣食住を共にし、友達との仲を深める良い時間となりました！ #静岡女子高等学校 #静岡女子高校 #静岡女子 #静女 #全日制高校 #3年生 #修学旅行 #北海道 #札幌 #小樽 #函館 - Instagram",
-      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE55ZEkxQm1YSjliQU9OanNjNUhRakEtdnJKTWVSaFJPazRRYVY1c2lQMjVhd0Mwa1YySFEyV084X2JpbjFrTXA4N3Rub1JfQ2hnZ2VpSE93?oc=5",
-      "published": "Tue, 20 Jun 2023 07:00:00 GMT",
+      "title": "北海道三大夜景 最後のピース。 函館山、藻岩山と並んで北海道三大夜景の１つと謳われていますが、1番マイナーで知らない方も多いのではないでしょうか。かくいう私も実はここ『天狗山』から夜景を見るのは去年が初めてでした。他の三大夜景と違い人が少なくゆっくりできて、 - Instagram",
+      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9sY0JxRDByM0hMdkVQYkRkb0lfdjRpU1htZGNrNDF4X3ZqZndVTk9BUWhfd0p6NUE2M3c0dlhtY2FLUU1TbGJHQ2hEN2dCWFNsQVVYSTF3?oc=5",
+      "published": "Sun, 09 Aug 2026 07:00:00 GMT",
       "area": ""
     },
     {
       "platform": "SearchIndex",
       "query": "Instagram 北海道",
-      "title": "北海道三大夜景 最後のピース。 函館山、藻岩山と並んで北海道三大夜景の１つと謳われていますが、1番マイナーで知らない方も多いのではないでしょうか。かくいう私も実はここ『天狗山』から夜景を見るのは去年が初めてでした。他の三大夜景と違い人が少なくゆっくりできて、 - Instagram",
-      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9sY0JxRDByM0hMdkVQYkRkb0lfdjRpU1htZGNrNDF4X3ZqZndVTk9BUWhfd0p6NUE2M3c0dlhtY2FLUU1TbGJHQ2hEN2dCWFNsQVVYSTF3?oc=5",
-      "published": "Sun, 09 Aug 2026 07:00:00 GMT",
+      "title": "【3年 修学旅行】 6月6日から9日まで3泊4日で北海道へ修学旅行へ行きました🛩 衣食住を共にし、友達との仲を深める良い時間となりました！ #静岡女子高等学校 #静岡女子高校 #静岡女子 #静女 #全日制高校 #3年生 #修学旅行 #北海道 #札幌 #小樽 #函館 - Instagram",
+      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE55ZEkxQm1YSjliQU9OanNjNUhRakEtdnJKTWVSaFJPazRRYVY1c2lQMjVhd0Mwa1YySFEyV084X2JpbjFrTXA4N3Rub1JfQ2hnZ2VpSE93?oc=5",
+      "published": "Tue, 20 Jun 2023 07:00:00 GMT",
       "area": ""
     },
     {
@@ -341,17 +317,17 @@
     {
       "platform": "SearchIndex",
       "query": "Instagram 北海道",
-      "title": "2泊3日で北海道どこまで行けると思いますか？ 冬の終わりの北海道に行きたくて。 函館 から小樽 、札幌 、美瑛 、富良野。 観たいところが多すぎて。 気づいたら ほぼ北海道横断していました． 広すぎる空。 どこまでも続く景色。 美味しすぎるごはん。 北海道って、 写真では伝えき - Instagram",
-      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9ZTi1DM2xuZ1ZzVHlfUU1aR0h4RUJBczRYMXpoNnI3NGlKTEx5MGI4WnFqLV93TUlrNjlfNUt0Q3NwbkpSLU1KRDg4a2hkUllJWE1sS1lB?oc=5",
-      "published": "Sun, 15 Mar 2026 07:00:00 GMT",
+      "title": "👈お得情報をGETしよう！ 卒業旅行で行きたい！北海道観光地まとめ 小樽運河 📍北海道 小樽市港町 旭山動物園 📍北海道 旭川市東旭川町倉沼 白金 青池 📍北海道 上川郡美瑛町白金 函館山 📍北海道 函館市 白い恋人パーク 📍北海道 札幌市 西区宮の沢 === 皆さんの気に - Instagram",
+      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBQYVFBUXJrTHV6VjZtSWlVVmdfempRVVNva2F4cGRyU3BWcHZGQkpweHRubWdERWRheVZlZHFyZm9QTGxvTGw5aTlvSUVQZGlhcEE?oc=5",
+      "published": "Thu, 19 Mar 2026 07:00:00 GMT",
       "area": ""
     },
     {
       "platform": "SearchIndex",
       "query": "Instagram 北海道",
-      "title": "👈お得情報をGETしよう！ 卒業旅行で行きたい！北海道観光地まとめ 小樽運河 📍北海道 小樽市港町 旭山動物園 📍北海道 旭川市東旭川町倉沼 白金 青池 📍北海道 上川郡美瑛町白金 函館山 📍北海道 函館市 白い恋人パーク 📍北海道 札幌市 西区宮の沢 === 皆さんの気に - Instagram",
-      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBQYVFBUXJrTHV6VjZtSWlVVmdfempRVVNva2F4cGRyU3BWcHZGQkpweHRubWdERWRheVZlZHFyZm9QTGxvTGw5aTlvSUVQZGlhcEE?oc=5",
-      "published": "Thu, 19 Mar 2026 07:00:00 GMT",
+      "title": "2泊3日で北海道どこまで行けると思いますか？ 冬の終わりの北海道に行きたくて。 函館 から小樽 、札幌 、美瑛 、富良野。 観たいところが多すぎて。 気づいたら ほぼ北海道横断していました． 広すぎる空。 どこまでも続く景色。 美味しすぎるごはん。 北海道って、 写真では伝えき - Instagram",
+      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9ZTi1DM2xuZ1ZzVHlfUU1aR0h4RUJBczRYMXpoNnI3NGlKTEx5MGI4WnFqLV93TUlrNjlfNUt0Q3NwbkpSLU1KRDg4a2hkUllJWE1sS1lB?oc=5",
+      "published": "Sun, 15 Mar 2026 07:00:00 GMT",
       "area": ""
     },
     {
@@ -397,14 +373,6 @@
     {
       "platform": "SearchIndex",
       "query": "Dcard 北海道",
-      "title": "北海道自由行10天獨旅（三）函館篇 - Dcard",
-      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1KbE9GQWFyeHJkc2ZnYmE1N3ViR0o2VnI4WHV4X0RIb2NXeXNmLXpXa09WQXRlN3U3cGdnUXNpYXp2SmwybllIUng2WlRoQVJUYjVtVTlJZGtYSnc?oc=5",
-      "published": "Sat, 07 Nov 2026 10:29:47 GMT",
-      "area": ""
-    },
-    {
-      "platform": "SearchIndex",
-      "query": "Dcard 北海道",
       "title": "#國外遊記 北海道3月追雪之旅❄️7天6夜 上 - Dcard",
       "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFBFSmFRVldxeVR1b2drVGM3RUlyVHE5ajB4UHJnZm1raUdvSzBNZnF1NUViSnJoZ0N4YWp2dUZwYkgzVHU0cTkzVEF6X19Ob1R0TUxj?oc=5",
       "published": "Sat, 24 Aug 2024 07:00:00 GMT",
@@ -424,6 +392,14 @@
       "title": "分享化妝包裡有什麼？冬季北海道旅行篇- 美妝板 - Dcard",
       "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5VSlNpR1VadE9JQ05oUDJwZTh5YkVhYnlPLVBLdHctLUpiQ3h0YWdPRjlsR0pFX1YwZzFnM045aUxickRrVzNRdDRITFFjVzFxamcw?oc=5",
       "published": "Wed, 12 Feb 2025 08:00:00 GMT",
+      "area": ""
+    },
+    {
+      "platform": "SearchIndex",
+      "query": "Dcard 北海道",
+      "title": "北海道冬天適合獨旅嗎 - Dcard",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFA0aGQ2TVdHVHhqLWtodVdLaXlQNlFNY1JnYk1xSVpwSWRob2U3LU5ic3RaMEpCWTFCaEZ5RU1mem5DaS1FU1RwX294WjUwTTJrRjN6NFViZ3FDT2M?oc=5",
+      "published": "Thu, 18 Jul 2024 07:00:00 GMT",
       "area": ""
     },
     {
@@ -480,6 +456,30 @@
       "title": "看板 Japan_Travel 文章列表 - ptt.cc",
       "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE15RkRod0RnVlZMRV9TcmdXbzlSeVhoQW9ITjFOcGFGQXJXRmRlWVZqbTlUNlJmRVlreG9oZXh6cmJxMWVSdERzaTkyeEQ3QmowMG1OSFdLejYyQQ?oc=5",
       "published": "Wed, 12 Mar 2014 05:14:32 GMT",
+      "area": ""
+    },
+    {
+      "platform": "SearchIndex",
+      "query": "PTT 北海道",
+      "title": "[遊記] 11月北海道自駕之旅分享- 看板 Japan_Travel - ptt.cc",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBaSzktUk0wNVkycm8wUDI3dDdUZm5sVGQ0NDNickh2VXE5OEZoMmJTWTlkYmpsZlBRejJob2NBeTYyWnRIRXdwY2IzejE1ek9kZ2pXeU1Gc2NycTQ2ZXFyNGhEczVpbW5sV25N?oc=5",
+      "published": "Sat, 14 Dec 2024 08:00:00 GMT",
+      "area": ""
+    },
+    {
+      "platform": "SearchIndex",
+      "query": "PTT 北海道",
+      "title": "標題 [問題] 日本包車公司選擇(北海道冬天) - ptt.cc",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1sTUp6RE1VMFhpMlBrMjYtWXNQcGx5SE1DR2h1UGFTVVp3MFpFdk91MEloel8wMzQtM2tTRjVWWHQ1NDhuZXgxVlRSWWt0eXN6SjFRZXhiYTI4aEx1RGJ6c3JsVFgxSEJGTWxv?oc=5",
+      "published": "Sat, 24 Aug 2024 07:00:00 GMT",
+      "area": ""
+    },
+    {
+      "platform": "SearchIndex",
+      "query": "PTT 北海道",
+      "title": "[問題] 北海道行程請益- 看板 Japan_Travel - ptt.cc",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFAzVXNXSS1RNnozZW54V2I1N2tWeUZzQ1lTdC1HMm5lcVNEeVhVaE1GNUdhdDItaU5wUi1hTkFXZ2xCNm4wQ2lRdGdWZzRzYUgzdzRSYW1NQnlEbi1nMlNnQ0hUNXJiekVlT2xn?oc=5",
+      "published": "Tue, 18 Aug 2026 07:00:00 GMT",
       "area": ""
     }
   ]
